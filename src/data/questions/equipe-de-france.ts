@@ -1,0 +1,60 @@
+import { VF, make } from './make';
+
+const q = make('equipe-de-france');
+
+export const EQUIPE_DE_FRANCE = [
+  // ----------------------------- FACILE -----------------------------
+  q('facile', 'qcm', 'Combien de Coupes du monde l’équipe de France a-t-elle remportées ?', ['Deux', 'Une', 'Trois', 'Quatre'], 0, '1998 à domicile et 2018 en Russie.'),
+  q('facile', 'qcm', 'Qui était le sélectionneur des Bleus champions du monde en 2018 ?', ['Didier Deschamps', 'Laurent Blanc', 'Raymond Domenech', 'Aimé Jacquet'], 0, 'Champion du monde comme joueur en 1998, puis comme entraîneur.'),
+  q('facile', 'qcm', 'Qui était le sélectionneur des Bleus en 1998 ?', ['Aimé Jacquet', 'Roger Lemerre', 'Michel Hidalgo', 'Gérard Houllier'], 0, 'Il a quitté son poste juste après le titre.'),
+  q('facile', 'vrai-faux', 'L’équipe de France est surnommée « les Bleus ».', VF, 0, 'En référence à la couleur de son maillot domicile.'),
+  q('facile', 'devine', 'Capitaine en 1998, il a soulevé la Coupe du monde avant de devenir sélectionneur.', ['Didier Deschamps', 'Laurent Blanc', 'Marcel Desailly', 'Bixente Lizarazu'], 0, 'Seul Français à avoir gagné le trophée comme joueur puis comme entraîneur.'),
+  q('facile', 'qcm', 'Quel pays la France a-t-elle battu en finale de la Coupe du monde 1998 ?', ['Brésil', 'Croatie', 'Italie', 'Argentine'], 0, 'Un 3-0 au Stade de France.'),
+  q('facile', 'qcm', 'Contre quelle équipe la France a-t-elle gagné la finale de la Coupe du monde 2018 ?', ['Croatie', 'Belgique', 'Angleterre', 'Brésil'], 0, 'Un 4-2 spectaculaire à Moscou.'),
+  q('facile', 'date', 'En quelle année la France a-t-elle remporté son premier Championnat d’Europe ?', ['1984', '1980', '1988', '1992'], 0, 'À domicile, avec un Platini étincelant.'),
+  q('facile', 'qcm', 'Quel joueur français a marqué un triplé en finale de la Coupe du monde 2022 ?', ['Kylian Mbappé', 'Olivier Giroud', 'Antoine Griezmann', 'Randal Kolo Muani'], 0, 'Trois buts, et une défaite aux tirs au but malgré tout.'),
+  q('facile', 'vrai-faux', 'La France a disputé la finale de la Coupe du monde en 2006.', VF, 0, 'Battue par l’Italie aux tirs au but à Berlin.'),
+  q('facile', 'qcm', 'Dans quel stade l’équipe de France dispute-t-elle ses matchs à domicile ?', ['Le Stade de France', 'Le Parc des Princes', 'Le Vélodrome', 'Le Groupama Stadium'], 0, 'Construit pour la Coupe du monde 1998 à Saint-Denis.'),
+  q('facile', 'qcm', 'Quel joueur a inscrit deux buts de la tête en finale 1998 ?', ['Zinédine Zidane', 'Emmanuel Petit', 'Lilian Thuram', 'Youri Djorkaeff'], 0, 'Deux têtes sur corner avant la mi-temps.'),
+  q('facile', 'qcm', 'Quelle compétition la France a-t-elle remportée en 2021 ?', ['La Ligue des nations', 'L’Euro', 'La Coupe des confédérations', 'La Coupe du monde'], 0, 'Une victoire 2-1 en finale contre l’Espagne.'),
+  q('facile', 'devine', 'Gardien et capitaine, il détient le record de sélections en équipe de France.', ['Hugo Lloris', 'Fabien Barthez', 'Bernard Lama', 'Steve Mandanda'], 0, 'Plus de cent quarante sélections, dont deux finales de Coupe du monde.'),
+  q('facile', 'qcm', 'Quel pays a battu la France en finale de l’Euro 2016 ?', ['Portugal', 'Allemagne', 'Espagne', 'Italie'], 0, 'Un 1-0 après prolongation, au Stade de France.'),
+  q('facile', 'vrai-faux', 'Kylian Mbappé avait moins de vingt ans lorsqu’il est devenu champion du monde.', VF, 0, 'Dix-neuf ans en juillet 2018.'),
+  q('facile', 'qcm', 'Quel numéro porte traditionnellement le gardien titulaire ?', ['Le 1', 'Le 12', 'Le 16', 'Le 30'], 0, 'Une tradition héritée de la numérotation par ligne.'),
+
+  // ------------------------------ MOYEN ------------------------------
+  q('moyen', 'devine', 'Il détient le record de buts en équipe de France.', ['Olivier Giroud', 'Thierry Henry', 'Kylian Mbappé', 'Michel Platini'], 0, 'Giroud a dépassé les cinquante et un buts de Thierry Henry en 2022.'),
+  q('moyen', 'qcm', 'Qui a inscrit le but en or de la finale de l’Euro 2000 ?', ['David Trezeguet', 'Sylvain Wiltord', 'Zinédine Zidane', 'Youri Djorkaeff'], 0, 'Une reprise du gauche en prolongation contre l’Italie.'),
+  q('moyen', 'qcm', 'Qui a égalisé dans le temps additionnel de la finale de l’Euro 2000 ?', ['Sylvain Wiltord', 'David Trezeguet', 'Thierry Henry', 'Robert Pirès'], 0, 'À la dernière seconde, alors que l’Italie se croyait championne.'),
+  q('moyen', 'qcm', 'Qui a marqué les deux buts français en demi-finale de la Coupe du monde 1998 contre la Croatie ?', ['Lilian Thuram', 'Zinédine Zidane', 'Christophe Dugarry', 'Bixente Lizarazu'], 0, 'Les deux seuls buts de sa carrière internationale.'),
+  q('moyen', 'date', 'En quelle année la France a-t-elle disputé la demi-finale de Séville contre la RFA ?', ['1982', '1978', '1986', '1990'], 0, 'Un 3-3 puis une élimination aux tirs au but, après la sortie de Battiston.'),
+  q('moyen', 'qcm', 'Combien de buts Michel Platini a-t-il inscrits lors de l’Euro 1984 ?', ['Neuf', 'Sept', 'Cinq', 'Onze'], 0, 'Un record pour une seule phase finale de l’Euro.'),
+  q('moyen', 'intrus', 'Lequel de ces joueurs n’était pas dans le groupe champion du monde en 1998 ?', ['Jean-Pierre Papin', 'Emmanuel Petit', 'Marcel Desailly', 'Christian Karembeu'], 0, 'Papin avait quitté les Bleus trois ans plus tôt.'),
+  q('moyen', 'qcm', 'Quel sélectionneur a dirigé la France lors de la Coupe du monde 2010 ?', ['Raymond Domenech', 'Laurent Blanc', 'Didier Deschamps', 'Jacques Santini'], 0, 'Une campagne marquée par la grève de Knysna.'),
+  q('moyen', 'qcm', 'Quel joueur a transformé un penalty en « panenka » lors de la finale 2006 ?', ['Zinédine Zidane', 'David Trezeguet', 'Thierry Henry', 'Franck Ribéry'], 0, 'Le ballon touche la barre avant de rentrer.'),
+  q('moyen', 'vrai-faux', 'La France a terminé troisième de la Coupe du monde 1958.', VF, 0, 'Avec les treize buts de Just Fontaine.'),
+  q('moyen', 'qcm', 'Quel club formait Kylian Mbappé avant son passage à Monaco ?', ['Bondy', 'Le Havre', 'Rennes', 'Nantes'], 0, 'L’AS Bondy, en Seine-Saint-Denis.'),
+  q('moyen', 'qcm', 'Quel joueur a été élu meilleur joueur de l’Euro 1984 ?', ['Michel Platini', 'Jean Tigana', 'Alain Giresse', 'Luis Fernández'], 0, 'Il marque dans tous les matchs de la compétition.'),
+  q('moyen', 'devine', 'Surnommé « le carré magique », ce milieu des années 1980 comptait Platini, Giresse, Tigana et un quatrième joueur. Lequel ?', ['Luis Fernández', 'Bernard Genghini', 'Jean-Marc Ferreri', 'Didier Six'], 0, 'Fernández complète le carré lors de l’Euro 1984.'),
+  q('moyen', 'qcm', 'À quel stade la France a-t-elle été éliminée de l’Euro 2020 ?', ['En huitièmes de finale', 'En quarts de finale', 'En demi-finale', 'Au premier tour'], 0, 'Battue par la Suisse aux tirs au but après un 3-3.'),
+  q('moyen', 'qcm', 'Quel attaquant français a été sacré meilleur buteur de la Coupe du monde 2022 ?', ['Kylian Mbappé', 'Olivier Giroud', 'Lionel Messi', 'Julián Álvarez'], 0, 'Huit buts, dont trois en finale.'),
+  q('moyen', 'qcm', 'Quel joueur a marqué le premier but français de la finale 2018 ?', ['Mario Mandžukić, contre son camp', 'Antoine Griezmann', 'Paul Pogba', 'Kylian Mbappé'], 0, 'Un coup franc de Griezmann dévié par Mandžukić.'),
+
+  // ---------------------------- DIFFICILE ----------------------------
+  q('difficile', 'date', 'En quelle année l’équipe de France a-t-elle disputé son tout premier match officiel ?', ['1904', '1919', '1890', '1912'], 0, 'Un 3-3 contre la Belgique à Bruxelles.'),
+  q('difficile', 'qcm', 'Quel joueur a inscrit treize buts lors de la Coupe du monde 1958 ?', ['Just Fontaine', 'Raymond Kopa', 'Roger Piantoni', 'Maryan Wisnieski'], 0, 'Un record pour une seule édition, toujours inégalé.'),
+  q('difficile', 'devine', 'Il a remporté le Ballon d’Or 1958 et joué au Real Madrid aux côtés de Di Stéfano.', ['Raymond Kopa', 'Just Fontaine', 'Jean Vincent', 'Roger Marche'], 0, 'Kopa remporte trois Coupes d’Europe avec le Real.'),
+  q('difficile', 'qcm', 'Quel sélectionneur a dirigé la France lors de l’Euro 1984 ?', ['Michel Hidalgo', 'Henri Michel', 'Michel Platini', 'Gérard Houllier'], 0, 'Il quitte son poste juste après le titre.'),
+  q('difficile', 'qcm', 'Quelle compétition la France a-t-elle remportée en 2001 et 2003 ?', ['La Coupe des confédérations', 'La Ligue des nations', 'L’Euro', 'Les Jeux olympiques'], 0, 'Deux titres consécutifs dans cette compétition aujourd’hui disparue.'),
+  q('difficile', 'qcm', 'Quel joueur a marqué le but de la qualification contre l’Irlande en 2009, après une main litigieuse de Thierry Henry ?', ['William Gallas', 'Nicolas Anelka', 'André-Pierre Gignac', 'Sidney Govou'], 0, 'Une qualification pour 2010 restée dans toutes les mémoires irlandaises.'),
+  q('difficile', 'intrus', 'Lequel de ces sélectionneurs n’a jamais dirigé l’équipe de France ?', ['Arsène Wenger', 'Jacques Santini', 'Roger Lemerre', 'Henri Michel'], 0, 'Wenger n’a jamais pris les Bleus, malgré les rumeurs récurrentes.'),
+  q('difficile', 'qcm', 'Combien de joueurs français ont remporté le Ballon d’Or ?', ['Six', 'Quatre', 'Huit', 'Trois'], 0, 'Kopa, Platini, Papin, Zidane, Benzema et Dembélé.'),
+  q('difficile', 'vrai-faux', 'La France a remporté un titre olympique en football.', VF, 0, 'En 1984 à Los Angeles, avec une sélection espoirs.'),
+  q('difficile', 'qcm', 'Quel joueur a été expulsé lors de la finale de la Coupe du monde 2006 ?', ['Zinédine Zidane', 'Marco Materazzi', 'Patrick Vieira', 'Gennaro Gattuso'], 0, 'Un coup de tête à la 110e minute, pour son dernier match.'),
+  q('difficile', 'qcm', 'Quel gardien français a disputé la finale de la Coupe du monde 1998 ?', ['Fabien Barthez', 'Bernard Lama', 'Lionel Charbonnier', 'Ulrich Ramé'], 0, 'Son crâne embrassé par Laurent Blanc avant chaque match.'),
+  q('difficile', 'date', 'En quelle année Karim Benzema est-il revenu en équipe de France après cinq ans d’absence ?', ['2021', '2019', '2022', '2020'], 0, 'Rappelé pour l’Euro 2020, disputé en 2021.'),
+  q('difficile', 'qcm', 'Quel joueur détient le record de sélections parmi les joueurs de champ français ?', ['Olivier Giroud', 'Lilian Thuram', 'Antoine Griezmann', 'Thierry Henry'], 0, 'Devant les cent quarante-deux sélections de Lilian Thuram.'),
+  q('difficile', 'qcm', 'Quel pays la France a-t-elle battu 4-1 pour son entrée dans la Coupe du monde 2022 ?', ['L’Australie', 'Le Danemark', 'La Tunisie', 'La Pologne'], 0, 'Menée au score, la France renverse le match dès la première période.'),
+  q('difficile', 'devine', 'Il a inscrit le but du 3-0 en finale 1998, dans le temps additionnel.', ['Emmanuel Petit', 'Youri Djorkaeff', 'Christophe Dugarry', 'Patrick Vieira'], 0, 'Sur une contre-attaque lancée par Vieira.'),
+  q('difficile', 'qcm', 'Quel sélectionneur a succédé à Aimé Jacquet en 1998 ?', ['Roger Lemerre', 'Jacques Santini', 'Raymond Domenech', 'Gérard Houllier'], 0, 'Il remportera l’Euro 2000 dès sa deuxième année.'),
+];

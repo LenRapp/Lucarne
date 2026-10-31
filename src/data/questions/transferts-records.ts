@@ -1,0 +1,60 @@
+import { VF, make } from './make';
+
+const q = make('transferts-records');
+
+export const TRANSFERTS_RECORDS = [
+  // ----------------------------- FACILE -----------------------------
+  q('facile', 'qcm', 'Quel joueur détient le record du transfert le plus cher de l’histoire ?', ['Neymar', 'Kylian Mbappé', 'Cristiano Ronaldo', 'Philippe Coutinho'], 0, 'Deux cent vingt-deux millions d’euros du Barça au PSG, en 2017.'),
+  q('facile', 'date', 'En quelle année Neymar a-t-il rejoint le Paris Saint-Germain ?', ['2017', '2015', '2019', '2013'], 0, 'Le club active sa clause libératoire record.'),
+  q('facile', 'qcm', 'De quel club Kylian Mbappé est-il arrivé au Paris Saint-Germain ?', ['AS Monaco', 'Lille', 'Lyon', 'Rennes'], 0, 'Après son titre de champion de France 2017.'),
+  q('facile', 'vrai-faux', 'Un transfert peut se faire gratuitement quand le contrat d’un joueur arrive à son terme.', VF, 0, 'C’est l’effet de l’arrêt Bosman, depuis 1995.'),
+  q('facile', 'qcm', 'Comment appelle-t-on un transfert temporaire d’un joueur vers un autre club ?', ['Un prêt', 'Un échange', 'Une option', 'Une clause'], 0, 'Souvent assorti d’une option d’achat.'),
+  q('facile', 'qcm', 'Quel club a recruté Cristiano Ronaldo en 2009 pour un montant record à l’époque ?', ['Real Madrid', 'Manchester United', 'Juventus', 'Chelsea'], 0, 'Environ quatre-vingt-quatorze millions d’euros.'),
+  q('facile', 'qcm', 'Quel joueur détient le record de buts en sélection nationale chez les hommes ?', ['Cristiano Ronaldo', 'Lionel Messi', 'Ali Daei', 'Pelé'], 0, 'Plus de cent trente buts avec le Portugal.'),
+  q('facile', 'vrai-faux', 'Lionel Messi a joué toute sa carrière européenne au Barça.', VF, 1, 'Il a joué deux saisons au Paris Saint-Germain.'),
+  q('facile', 'qcm', 'Combien de temps dure un match de football réglementaire ?', ['Quatre-vingt-dix minutes', 'Quatre-vingts minutes', 'Cent minutes', 'Soixante minutes'], 0, 'Deux périodes de quarante-cinq minutes, plus le temps additionnel.'),
+  q('facile', 'qcm', 'Quel club a recruté Zinédine Zidane pour un montant record en 2001 ?', ['Real Madrid', 'Barcelone', 'Manchester United', 'Inter Milan'], 0, 'Environ soixante-treize millions d’euros, venu de la Juventus.'),
+  q('facile', 'qcm', 'Combien de remplacements une équipe peut-elle effectuer en match officiel depuis 2022 ?', ['Cinq', 'Trois', 'Quatre', 'Six'], 0, 'La règle des cinq changements est devenue permanente.'),
+  q('facile', 'vrai-faux', 'Il existe deux périodes de transferts par saison en Europe.', VF, 0, 'Le mercato d’été et celui d’hiver.'),
+  q('facile', 'qcm', 'Quel joueur a marqué plus de huit cents buts officiels en carrière ?', ['Cristiano Ronaldo', 'Zlatan Ibrahimović', 'Karim Benzema', 'Luis Suárez'], 0, 'Messi s’en approche également.'),
+  q('facile', 'qcm', 'Quelle est la durée d’une prolongation complète ?', ['Trente minutes', 'Vingt minutes', 'Quinze minutes', 'Quarante minutes'], 0, 'Deux périodes de quinze minutes.'),
+  q('facile', 'qcm', 'Quel club a payé le transfert record pour un gardien en 2018 ?', ['Chelsea', 'Liverpool', 'Real Madrid', 'Bayern Munich'], 0, 'Pour Kepa Arrizabalaga, venu de l’Athletic Bilbao.'),
+  q('facile', 'devine', 'Arrêt juridique de 1995 qui a libéré les joueurs en fin de contrat.', ['L’arrêt Bosman', 'L’arrêt Webster', 'L’arrêt Matuzalem', 'L’arrêt Charleroi'], 0, 'Du nom d’un joueur belge, Jean-Marc Bosman.'),
+  q('facile', 'qcm', 'Combien de joueurs une équipe aligne-t-elle sur le terrain ?', ['Onze', 'Dix', 'Douze', 'Neuf'], 0, 'Gardien compris.'),
+
+  // ------------------------------ MOYEN ------------------------------
+  q('moyen', 'qcm', 'De quel club Virgil van Dijk a-t-il rejoint Liverpool en 2018, pour un montant record pour un défenseur ?', ['Southampton', 'Celtic Glasgow', 'Ajax Amsterdam', 'Groningue'], 0, 'Environ quatre-vingts millions d’euros.'),
+  q('moyen', 'qcm', 'Quel joueur détient le record de sélections internationales chez les hommes ?', ['Cristiano Ronaldo', 'Lionel Messi', 'Sergio Ramos', 'Gianluigi Buffon'], 0, 'Plus de deux cent vingt sélections avec le Portugal.'),
+  q('moyen', 'qcm', 'Quel est le plus large succès enregistré dans un match international officiel ?', ['31-0', '17-0', '22-1', '12-0'], 0, 'L’Australie contre les Samoa américaines, en 2001.'),
+  q('moyen', 'date', 'En quelle année l’assistance vidéo à l’arbitrage a-t-elle été utilisée pour la première fois en Coupe du monde ?', ['2018', '2014', '2022', '2010'], 0, 'En Russie, après des tests en championnat.'),
+  q('moyen', 'qcm', 'Quel club a recruté Philippe Coutinho en 2018 pour plus de cent millions d’euros ?', ['Barcelone', 'Paris Saint-Germain', 'Bayern Munich', 'Manchester City'], 0, 'Un transfert devenu le symbole des mauvais investissements catalans.'),
+  q('moyen', 'qcm', 'Quel joueur a établi le record de transfert de Premier League en 2023 ?', ['Moisés Caicedo', 'Declan Rice', 'Jack Grealish', 'Enzo Fernández'], 0, 'Environ cent quinze millions de livres, de Brighton à Chelsea.'),
+  q('moyen', 'vrai-faux', 'Un joueur peut disputer des matchs officiels pour trois clubs différents dans la même saison.', VF, 1, 'Il peut être inscrit dans trois clubs, mais ne jouer que pour deux d’entre eux.'),
+  q('moyen', 'qcm', 'Quel attaquant a quitté Dortmund pour Manchester City en 2022 ?', ['Erling Haaland', 'Jadon Sancho', 'Jude Bellingham', 'Ousmane Dembélé'], 0, 'Grâce à une clause libératoire modeste au regard du marché.'),
+  q('moyen', 'qcm', 'Quel joueur a rejoint le Real Madrid en provenance de Dortmund en 2023 ?', ['Jude Bellingham', 'Erling Haaland', 'Jadon Sancho', 'Karim Adeyemi'], 0, 'Et a immédiatement enchaîné les buts décisifs.'),
+  q('moyen', 'qcm', 'Quel stade a accueilli le record d’affluence pour un match de football ?', ['Le Maracanã', 'Le Camp Nou', 'Wembley', 'L’Azteca'], 0, 'Près de deux cent mille spectateurs lors de la finale de 1950.'),
+  q('moyen', 'qcm', 'Quel joueur a quitté le Barça pour le Real Madrid en 2000, déclenchant un scandale en Catalogne ?', ['Luís Figo', 'Ronaldo', 'Rivaldo', 'Patrick Kluivert'], 0, 'Une tête de cochon a été lancée sur la pelouse lors de son retour au Camp Nou.'),
+  q('moyen', 'qcm', 'Quel club a dépensé le plus lors du mercato estival 2017 ?', ['Paris Saint-Germain', 'Manchester City', 'Barcelone', 'Real Madrid'], 0, 'Avec les arrivées de Neymar et de Mbappé.'),
+  q('moyen', 'qcm', 'Quelle est la hauteur réglementaire d’un but de football ?', ['2,44 mètres', '2 mètres', '3 mètres', '2,20 mètres'], 0, 'Pour une largeur de 7,32 mètres.'),
+  q('moyen', 'qcm', 'Quel joueur a marqué le but le plus rapide de l’histoire de la Coupe du monde ?', ['Hakan Şükür', 'Clint Dempsey', 'Ernest Pohl', 'Bryan Robson'], 0, 'Onze secondes, en 2002 pour la Turquie.'),
+  q('moyen', 'qcm', 'Combien de cartons jaunes faut-il pour être exclu dans un même match ?', ['Deux', 'Trois', 'Un seul suffit', 'Quatre'], 0, 'Deux jaunes valent un rouge.'),
+  q('moyen', 'qcm', 'Quel club a battu le record de transfert mondial en 2009 avant d’être dépassé ?', ['Real Madrid', 'Manchester City', 'Chelsea', 'Inter Milan'], 0, 'Avec Kaká puis Cristiano Ronaldo le même été.'),
+
+  // ---------------------------- DIFFICILE ----------------------------
+  q('difficile', 'qcm', 'Quelle est la largeur réglementaire d’un but de football ?', ['7,32 mètres', '6 mètres', '8 mètres', '7 mètres'], 0, 'Héritée des mesures impériales : huit yards.'),
+  q('difficile', 'qcm', 'À quelle distance du but se tire un penalty ?', ['11 mètres', '9 mètres', '12 mètres', '10 mètres'], 0, 'Soit douze yards.'),
+  q('difficile', 'date', 'En quelle année la règle du hors-jeu a-t-elle été modifiée pour avantager l’attaquant à égalité de ligne ?', ['1990', '1978', '2002', '1984'], 0, 'Un attaquant à hauteur du défenseur n’est plus hors-jeu.'),
+  q('difficile', 'qcm', 'Quel attaquant d’avant-guerre est crédité du plus grand nombre de buts en carrière par les décomptes historiques ?', ['Josef Bican', 'Ferenc Puskás', 'Gerd Müller', 'Eusébio'], 0, 'L’Austro-Tchèque aurait dépassé les sept cents buts officiels.'),
+  q('difficile', 'qcm', 'Quel joueur a été transféré pour un montant record entre deux clubs italiens en 2001 ?', ['Gianluigi Buffon', 'Francesco Totti', 'Christian Vieri', 'Hernán Crespo'], 0, 'Environ cinquante-deux millions d’euros, de Parme à la Juventus.'),
+  q('difficile', 'devine', 'Premier joueur transféré pour plus d’un million de livres, en 1979, en Angleterre.', ['Trevor Francis', 'Kevin Keegan', 'Bryan Robson', 'Ray Wilkins'], 0, 'Recruté par le Nottingham Forest de Brian Clough.'),
+  q('difficile', 'qcm', 'Combien de temps un gardien peut-il garder le ballon en main avant d’être sanctionné ?', ['Six secondes', 'Quatre secondes', 'Dix secondes', 'Huit secondes'], 0, 'Une règle rarement appliquée à la lettre.'),
+  q('difficile', 'vrai-faux', 'Un joueur peut être hors-jeu sur une rentrée de touche.', VF, 1, 'Le hors-jeu ne s’applique ni sur touche, ni sur corner, ni sur coup de pied de but.'),
+  q('difficile', 'qcm', 'Quel joueur détient le record de buts en une seule année civile ?', ['Lionel Messi', 'Cristiano Ronaldo', 'Gerd Müller', 'Pelé'], 0, 'Quatre-vingt-onze buts en 2012, clubs et sélection confondus.'),
+  q('difficile', 'qcm', 'Quel club a réalisé la plus grosse vente de son histoire en cédant Ousmane Dembélé au Barça ?', ['Borussia Dortmund', 'Rennes', 'Paris Saint-Germain', 'Lyon'], 0, 'Un an seulement après l’avoir recruté à Rennes.'),
+  q('difficile', 'intrus', 'Lequel de ces transferts n’a jamais eu lieu ?', ['Zinédine Zidane à Manchester United', 'Luís Figo au Real Madrid', 'Gonzalo Higuaín à la Juventus', 'Neymar au Paris Saint-Germain'], 0, 'Zidane est passé de Bordeaux à la Juventus puis au Real.'),
+  q('difficile', 'qcm', 'Quelle est la circonférence réglementaire d’un ballon de football de taille 5 ?', ['Entre 68 et 70 centimètres', 'Entre 60 et 62 centimètres', 'Entre 75 et 78 centimètres', 'Entre 64 et 66 centimètres'], 0, 'Pour un poids compris entre 410 et 450 grammes.'),
+  q('difficile', 'qcm', 'Quel joueur a disputé le plus de matchs de Coupe du monde ?', ['Lionel Messi', 'Lothar Matthäus', 'Paolo Maldini', 'Miroslav Klose'], 0, 'Il a dépassé les vingt-cinq matchs de Matthäus en 2022.'),
+  q('difficile', 'date', 'En quelle année la règle de la passe en retrait au gardien a-t-elle été interdite au pied ?', ['1992', '1988', '1996', '1986'], 0, 'Une réforme née de l’ennui provoqué par la Coupe du monde 1990.'),
+  q('difficile', 'qcm', 'Quel club détient le record de victoires consécutives en Premier League ?', ['Manchester City', 'Liverpool', 'Arsenal', 'Chelsea'], 0, 'Dix-huit succès d’affilée à l’automne 2017.'),
+  q('difficile', 'qcm', 'Combien d’arbitres assistants secondent l’arbitre central le long des lignes de touche ?', ['Deux', 'Un', 'Trois', 'Quatre'], 0, 'Un par ligne de touche, chargés notamment du hors-jeu.'),
+];

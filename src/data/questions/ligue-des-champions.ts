@@ -1,0 +1,60 @@
+import { VF, make } from './make';
+
+const q = make('ligue-des-champions');
+
+export const LIGUE_DES_CHAMPIONS = [
+  // ----------------------------- FACILE -----------------------------
+  q('facile', 'qcm', 'Quel club détient le record de victoires en Coupe d’Europe des clubs champions et Ligue des champions ?', ['Real Madrid', 'Milan AC', 'Bayern Munich', 'Liverpool'], 0, 'Le Real Madrid devance largement tous ses poursuivants.'),
+  q('facile', 'qcm', 'Quel club français a remporté la Ligue des champions en 1993 ?', ['Olympique de Marseille', 'Paris Saint-Germain', 'AS Monaco', 'Olympique lyonnais'], 0, 'Marseille bat le Milan AC 1-0 à Munich.'),
+  q('facile', 'devine', 'Il a marqué l’unique but de la finale 1993 pour Marseille, de la tête.', ['Basile Boli', 'Didier Deschamps', 'Alen Bokšić', 'Rudi Völler'], 0, 'Une tête sur corner juste avant la mi-temps.'),
+  q('facile', 'qcm', 'Combien d’équipes un groupe de Ligue des champions comptait-il dans le format en vigueur jusqu’en 2024 ?', ['Quatre', 'Trois', 'Cinq', 'Six'], 0, 'Huit groupes de quatre, deux qualifiés par groupe.'),
+  q('facile', 'vrai-faux', 'La Ligue des champions s’appelait auparavant la Coupe des clubs champions européens.', VF, 0, 'Le changement de nom et de format date de 1992.'),
+  q('facile', 'qcm', 'Quel club a remporté la Ligue des champions 2019 ?', ['Liverpool', 'Tottenham', 'Barcelone', 'Ajax Amsterdam'], 0, 'Liverpool bat Tottenham 2-0 à Madrid.'),
+  q('facile', 'qcm', 'De quel pays vient le Bayern Munich ?', ['Allemagne', 'Autriche', 'Suisse', 'Pays-Bas'], 0, 'Le club le plus titré d’Allemagne.'),
+  q('facile', 'date', 'En quelle année le Paris Saint-Germain a-t-il remporté sa première Ligue des champions ?', ['2025', '2020', '2023', '2024'], 0, 'Une démonstration 5-0 contre l’Inter Milan en finale.'),
+  q('facile', 'qcm', 'Quel club italien a remporté sept Coupes d’Europe des clubs champions ou Ligues des champions ?', ['Milan AC', 'Inter Milan', 'Juventus', 'AS Rome'], 0, 'Le Milan AC est le club italien le plus titré en Europe.'),
+  q('facile', 'vrai-faux', 'La finale de la Ligue des champions se joue en match aller-retour.', VF, 1, 'C’est un match unique sur terrain neutre depuis l’origine.'),
+  q('facile', 'qcm', 'Dans quel stade le Real Madrid reçoit-il ses matchs européens ?', ['Santiago-Bernabéu', 'Camp Nou', 'Metropolitano', 'Mestalla'], 0, 'Le Camp Nou et le Metropolitano sont ceux de Barcelone et de l’Atlético.'),
+  q('facile', 'devine', 'Entraîneur, il a remporté trois Ligues des champions d’affilée avec le Real Madrid.', ['Zinédine Zidane', 'Carlo Ancelotti', 'José Mourinho', 'Pep Guardiola'], 0, '2016, 2017 et 2018, un enchaînement inédit à l’ère moderne.'),
+  q('facile', 'qcm', 'Quel club anglais a remporté la Ligue des champions 2021 ?', ['Chelsea', 'Manchester City', 'Liverpool', 'Manchester United'], 0, 'Chelsea bat Manchester City 1-0 à Porto.'),
+  q('facile', 'qcm', 'Combien de buts faut-il pour un triplé dans un match ?', ['Trois', 'Deux', 'Quatre', 'Cinq'], 0, 'Le terme vient du cricket, où l’on offrait un chapeau au joueur.'),
+  q('facile', 'vrai-faux', 'Le vainqueur de la Ligue des champions est qualifié pour l’édition suivante.', VF, 0, 'Une règle qui protège le tenant même sans qualification par son championnat.'),
+  q('facile', 'qcm', 'Quel club a remporté la Ligue des champions 2020, dans un tournoi joué à huis clos à Lisbonne ?', ['Bayern Munich', 'Paris Saint-Germain', 'Lyon', 'Manchester City'], 0, 'Un 1-0 contre le PSG, but de Coman.'),
+  q('facile', 'qcm', 'Quelle compétition européenne se situe juste en dessous de la Ligue des champions ?', ['La Ligue Europa', 'La Supercoupe', 'La Coupe Intertoto', 'La Coupe des coupes'], 0, 'La Ligue Europa, suivie de la Ligue Conférence.'),
+
+  // ------------------------------ MOYEN ------------------------------
+  q('moyen', 'qcm', 'Quel club a remonté un retard de 3-0 en finale 2005 avant de s’imposer aux tirs au but ?', ['Liverpool', 'Milan AC', 'Chelsea', 'Juventus'], 0, 'La « nuit d’Istanbul » : trois buts en six minutes au retour des vestiaires.'),
+  q('moyen', 'devine', 'Sa volée du gauche en finale 2002 contre le Bayer Leverkusen est l’un des plus beaux buts de l’histoire de la compétition.', ['Zinédine Zidane', 'Raúl', 'Roberto Carlos', 'Luís Figo'], 0, 'Un centre de Roberto Carlos repris de volée à Glasgow.'),
+  q('moyen', 'qcm', 'Quel club a remporté la Ligue des champions 2023 ?', ['Manchester City', 'Inter Milan', 'Real Madrid', 'Bayern Munich'], 0, 'Un 1-0 contre l’Inter à Istanbul, premier titre européen des Citizens.'),
+  q('moyen', 'intrus', 'Lequel de ces clubs n’a jamais remporté la Ligue des champions ?', ['Atlético de Madrid', 'Porto', 'Ajax Amsterdam', 'Celtic Glasgow'], 0, 'L’Atlético a perdu trois finales, dont deux contre son voisin madrilène.'),
+  q('moyen', 'qcm', 'Quel club portugais a remporté la Ligue des champions 2004 sous la direction de José Mourinho ?', ['Porto', 'Benfica', 'Sporting', 'Braga'], 0, 'Un 3-0 en finale contre Monaco.'),
+  q('moyen', 'qcm', 'Quel club français a atteint la finale de la Ligue des champions en 2004 ?', ['AS Monaco', 'Olympique lyonnais', 'Paris Saint-Germain', 'Lille'], 0, 'Battu par le Porto de Mourinho.'),
+  q('moyen', 'date', 'En quelle année l’Ajax Amsterdam a-t-il remporté sa dernière Coupe d’Europe des clubs champions ?', ['1995', '1973', '1988', '2001'], 0, 'Face au Milan AC, avec une génération emmenée par Kluivert et les frères De Boer.'),
+  q('moyen', 'qcm', 'Qui détient le record de buts en Ligue des champions ?', ['Cristiano Ronaldo', 'Lionel Messi', 'Robert Lewandowski', 'Raúl'], 0, 'Plus de cent quarante buts pour le Portugais.'),
+  q('moyen', 'vrai-faux', 'Un club a déjà remporté la Ligue des champions sans être qualifié par son championnat.', VF, 0, 'Liverpool en 2005, sixième de Premier League cette saison-là.'),
+  q('moyen', 'qcm', 'Quel club a perdu les finales 2014 et 2016 contre le Real Madrid ?', ['Atlético de Madrid', 'Juventus', 'Liverpool', 'Valence'], 0, 'Deux finales de Madrid, deux défaites pour l’Atlético.'),
+  q('moyen', 'devine', 'Il a marqué en finale de Coupe d’Europe avec trois clubs différents.', ['Clarence Seedorf', 'Zlatan Ibrahimović', 'Andriy Shevchenko', 'Samuel Eto’o'], 0, 'Seedorf est le seul vainqueur de la compétition avec trois clubs.'),
+  q('moyen', 'qcm', 'Combien de Ligues des champions le Barça a-t-il remportées sous Pep Guardiola ?', ['Deux', 'Une', 'Trois', 'Quatre'], 0, '2009 et 2011, les deux fois contre Manchester United.'),
+  q('moyen', 'qcm', 'Dans quelle ville s’est jouée la finale remportée par le PSG face à l’Inter ?', ['Munich', 'Londres', 'Istanbul', 'Lisbonne'], 0, 'À l’Allianz Arena, en mai 2025.'),
+  q('moyen', 'date', 'En quelle année la compétition a-t-elle pris le nom de Ligue des champions ?', ['1992', '1986', '1996', '1990'], 0, 'Avec l’introduction d’une phase de groupes.'),
+  q('moyen', 'qcm', 'Quel club a remporté la Ligue des champions 2024 ?', ['Real Madrid', 'Borussia Dortmund', 'Manchester City', 'Bayern Munich'], 0, 'Un 2-0 contre Dortmund à Wembley.'),
+  q('moyen', 'intrus', 'Lequel de ces entraîneurs n’a jamais gagné la Ligue des champions ?', ['Arsène Wenger', 'Jupp Heynckes', 'Louis van Gaal', 'Ottmar Hitzfeld'], 0, 'Wenger a perdu la finale 2006 avec Arsenal.'),
+
+  // ---------------------------- DIFFICILE ----------------------------
+  q('difficile', 'qcm', 'Quel club a remporté les cinq premières éditions de la Coupe des clubs champions ?', ['Real Madrid', 'Benfica', 'Milan AC', 'Inter Milan'], 0, 'De 1956 à 1960, avec Di Stéfano et Puskás.'),
+  q('difficile', 'qcm', 'Quel est le score de la finale 1960 entre le Real Madrid et l’Eintracht Francfort ?', ['7-3', '5-2', '6-1', '4-3'], 0, 'Un match resté célèbre à Glasgow, avec quatre buts de Puskás.'),
+  q('difficile', 'devine', 'Il a marqué dans les cinq premières finales de la Coupe des clubs champions.', ['Alfredo Di Stéfano', 'Ferenc Puskás', 'Francisco Gento', 'Raymond Kopa'], 0, 'Di Stéfano a marqué dans chacune des cinq finales remportées par le Real.'),
+  q('difficile', 'qcm', 'Quel club écossais a remporté la Coupe d’Europe en 1967 avec une équipe née à quelques kilomètres du stade ?', ['Celtic Glasgow', 'Rangers', 'Aberdeen', 'Dundee United'], 0, 'Les « Lisbon Lions » battent l’Inter Milan 2-1.'),
+  q('difficile', 'date', 'En quelle année l’Étoile rouge de Belgrade a-t-elle remporté la Coupe d’Europe ?', ['1991', '1988', '1994', '1986'], 0, 'Aux tirs au but contre l’Olympique de Marseille.'),
+  q('difficile', 'qcm', 'Combien de finales consécutives l’Ajax a-t-il remportées au début des années 1970 ?', ['Trois', 'Deux', 'Quatre', 'Cinq'], 0, '1971, 1972 et 1973, avec le football total de Cruyff.'),
+  q('difficile', 'intrus', 'Lequel de ces clubs n’a jamais atteint une finale de Coupe d’Europe des clubs champions ?', ['Olympique lyonnais', 'Leeds United', 'Malmö FF', 'Panathinaïkos'], 0, 'Lyon a atteint les demi-finales en 2010 et 2020, jamais la finale.'),
+  q('difficile', 'qcm', 'Quel club a remporté la Coupe d’Europe en 1979 et 1980 ?', ['Nottingham Forest', 'Liverpool', 'Hambourg', 'Aston Villa'], 0, 'Deux titres consécutifs sous la direction de Brian Clough.'),
+  q('difficile', 'devine', 'Il détient le record de passes décisives en Ligue des champions.', ['Cristiano Ronaldo', 'Lionel Messi', 'Ryan Giggs', 'Ángel Di María'], 0, 'Ronaldo devance Messi de peu dans ce classement.'),
+  q('difficile', 'qcm', 'Quel gardien a arrêté deux tirs au but en finale 1984 pour Liverpool contre l’AS Rome ?', ['Bruce Grobbelaar', 'Ray Clemence', 'Peter Shilton', 'Neville Southall'], 0, 'Ses jambes tremblantes ont déstabilisé les tireurs romains.'),
+  q('difficile', 'qcm', 'Quelle équipe a été finaliste en 1997 avec le Borussia Dortmund pour adversaire ?', ['Juventus', 'Real Madrid', 'Manchester United', 'Ajax Amsterdam'], 0, 'Dortmund bat la Juventus 3-1 à Munich.'),
+  q('difficile', 'vrai-faux', 'Un club a déjà remporté la Ligue des champions sans encaisser un seul but de toute la compétition.', VF, 1, 'Aucun vainqueur n’a réussi cet exploit sur une campagne complète.'),
+  q('difficile', 'qcm', 'Quel club a battu le Bayern Munich en finale 1999 avec deux buts dans le temps additionnel ?', ['Manchester United', 'Chelsea', 'Arsenal', 'Liverpool'], 0, 'Sheringham puis Solskjær renversent le match au Camp Nou.'),
+  q('difficile', 'date', 'En quelle année la finale a-t-elle été disputée entre deux clubs du même pays pour la première fois ?', ['2000', '2003', '1997', '2008'], 0, 'Real Madrid contre Valence, à Saint-Denis.'),
+  q('difficile', 'qcm', 'Quel club a éliminé le Paris Saint-Germain après avoir perdu 4-0 à l’aller en huitièmes de finale 2017 ?', ['Barcelone', 'Real Madrid', 'Manchester City', 'Chelsea'], 0, 'La « remontada » : 6-1 au retour au Camp Nou.'),
+  q('difficile', 'qcm', 'Combien de temps dure une prolongation complète en Ligue des champions ?', ['Trente minutes', 'Vingt minutes', 'Quarante minutes', 'Quinze minutes'], 0, 'Deux périodes de quinze minutes, sans pause longue.'),
+];

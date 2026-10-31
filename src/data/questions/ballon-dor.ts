@@ -1,0 +1,60 @@
+import { VF, make } from './make';
+
+const q = make('ballon-dor');
+
+export const BALLON_DOR = [
+  // ----------------------------- FACILE -----------------------------
+  q('facile', 'qcm', 'Quel joueur a remporté le plus de Ballons d’Or ?', ['Lionel Messi', 'Cristiano Ronaldo', 'Michel Platini', 'Johan Cruyff'], 0, 'Huit trophées, un total encore jamais approché.'),
+  q('facile', 'qcm', 'Combien de Ballons d’Or Cristiano Ronaldo a-t-il remportés ?', ['Cinq', 'Quatre', 'Six', 'Trois'], 0, '2008, 2013, 2014, 2016 et 2017.'),
+  q('facile', 'vrai-faux', 'Le Ballon d’Or récompense un joueur sur une saison ou une année, pas sur toute sa carrière.', VF, 0, 'C’est une récompense annuelle, décernée par un jury de journalistes.'),
+  q('facile', 'qcm', 'Quel magazine français a créé le Ballon d’Or ?', ['France Football', 'L’Équipe', 'Onze Mondial', 'So Foot'], 0, 'Créé en 1956 à l’initiative de Gabriel Hanot.'),
+  q('facile', 'devine', 'Il a remporté le Ballon d’Or 1998, l’année de son doublé en finale de Coupe du monde.', ['Zinédine Zidane', 'Ronaldo', 'Davor Šuker', 'Rivaldo'], 0, 'Son unique Ballon d’Or, après une année 1998 parfaite.'),
+  q('facile', 'qcm', 'Quel joueur français a remporté le Ballon d’Or 2022 ?', ['Karim Benzema', 'Kylian Mbappé', 'Antoine Griezmann', 'N’Golo Kanté'], 0, 'Après une saison à quinze buts en Ligue des champions.'),
+  q('facile', 'vrai-faux', 'Il existe un Ballon d’Or féminin.', VF, 0, 'Créé en 2018 et remporté la première année par Ada Hegerberg.'),
+  q('facile', 'qcm', 'À quel poste jouait Lionel Messi lors de ses Ballons d’Or ?', ['Attaquant', 'Milieu défensif', 'Défenseur central', 'Gardien'], 0, 'Attaquant, souvent décroché en meneur de jeu.'),
+  q('facile', 'qcm', 'Quel club Cristiano Ronaldo représentait-il lors de son Ballon d’Or 2008 ?', ['Manchester United', 'Real Madrid', 'Juventus', 'Sporting'], 0, 'L’année du doublé championnat et Ligue des champions.'),
+  q('facile', 'date', 'En quelle année le premier Ballon d’Or a-t-il été décerné ?', ['1956', '1948', '1960', '1964'], 0, 'Remporté par l’Anglais Stanley Matthews, à quarante et un ans.'),
+  q('facile', 'qcm', 'Quel trophée récompense le meilleur buteur d’un championnat européen à l’échelle du continent ?', ['Le Soulier d’or', 'Le Ballon d’or', 'Le Gant d’or', 'Le Trophée Yachine'], 0, 'Le Soulier d’or européen, calculé avec un coefficient par championnat.'),
+  q('facile', 'vrai-faux', 'Le Ballon d’Or n’a pas été décerné en 2020.', VF, 0, 'Annulé en raison de la pandémie et d’une saison tronquée.'),
+  q('facile', 'qcm', 'Quel joueur a remporté le Ballon d’Or 2018, mettant fin à dix ans de domination Messi-Ronaldo ?', ['Luka Modrić', 'Antoine Griezmann', 'Mohamed Salah', 'Raphaël Varane'], 0, 'Après une Ligue des champions et une finale de Coupe du monde.'),
+  q('facile', 'qcm', 'Quel joueur français a remporté le Ballon d’Or 1991 ?', ['Jean-Pierre Papin', 'Eric Cantona', 'Laurent Blanc', 'Didier Deschamps'], 0, 'Le buteur de l’Olympique de Marseille.'),
+  q('facile', 'devine', 'Seul joueur africain à avoir remporté le Ballon d’Or, il est devenu président de son pays.', ['George Weah', 'Samuel Eto’o', 'Didier Drogba', 'Yaya Touré'], 0, 'Le Libérien George Weah, lauréat 1995.'),
+  q('facile', 'qcm', 'Quel joueur espagnol a remporté le Ballon d’Or 2024 ?', ['Rodri', 'Dani Carvajal', 'Lamine Yamal', 'Jude Bellingham'], 0, 'Le milieu de Manchester City, après un Euro remporté avec l’Espagne.'),
+  q('facile', 'qcm', 'Quel joueur français a remporté le Ballon d’Or 2025 ?', ['Ousmane Dembélé', 'Kylian Mbappé', 'Lamine Yamal', 'Vitinha'], 0, 'Après la saison européenne du Paris Saint-Germain.'),
+
+  // ------------------------------ MOYEN ------------------------------
+  q('moyen', 'devine', 'Il a remporté trois Ballons d’Or consécutifs au milieu des années 1980.', ['Michel Platini', 'Karl-Heinz Rummenigge', 'Marco van Basten', 'Ruud Gullit'], 0, 'Platini s’impose en 1983, 1984 et 1985 avec la Juventus.'),
+  q('moyen', 'qcm', 'Quel joueur a remporté le Ballon d’Or 2007 ?', ['Kaká', 'Cristiano Ronaldo', 'Lionel Messi', 'Didier Drogba'], 0, 'Le dernier lauréat avant la longue domination Messi-Ronaldo.'),
+  q('moyen', 'qcm', 'Quel défenseur a remporté le Ballon d’Or 2006 ?', ['Fabio Cannavaro', 'Lilian Thuram', 'John Terry', 'Carles Puyol'], 0, 'Capitaine de l’Italie championne du monde, et dernier défenseur lauréat.'),
+  q('moyen', 'qcm', 'Combien de Ballons d’Or le Brésilien Ronaldo a-t-il remportés ?', ['Deux', 'Un', 'Trois', 'Quatre'], 0, '1997 et 2002.'),
+  q('moyen', 'date', 'En quelle année Raymond Kopa est-il devenu le premier Français à remporter le Ballon d’Or ?', ['1958', '1956', '1962', '1960'], 0, 'L’année de la troisième place de la France en Coupe du monde.'),
+  q('moyen', 'qcm', 'Quel joueur a remporté le Ballon d’Or 2003 ?', ['Pavel Nedvěd', 'Thierry Henry', 'Paolo Maldini', 'Ruud van Nistelrooy'], 0, 'Le milieu tchèque de la Juventus.'),
+  q('moyen', 'intrus', 'Lequel de ces joueurs français n’a jamais remporté le Ballon d’Or ?', ['Thierry Henry', 'Zinédine Zidane', 'Michel Platini', 'Jean-Pierre Papin'], 0, 'Henry est monté sur le podium mais n’a jamais gagné.'),
+  q('moyen', 'qcm', 'Quel joueur portugais a remporté le Ballon d’Or 2000 ?', ['Luís Figo', 'Rui Costa', 'Cristiano Ronaldo', 'Eusébio'], 0, 'L’année de son transfert retentissant du Barça au Real.'),
+  q('moyen', 'vrai-faux', 'Le Ballon d’Or a longtemps été réservé aux joueurs européens.', VF, 0, 'Jusqu’en 1995, seuls les Européens pouvaient être désignés.'),
+  q('moyen', 'qcm', 'Quel attaquant anglais a remporté le Ballon d’Or 2001 ?', ['Michael Owen', 'David Beckham', 'Alan Shearer', 'Steven Gerrard'], 0, 'Après une saison à cinq trophées avec Liverpool.'),
+  q('moyen', 'qcm', 'Avec quel club Marco van Basten a-t-il remporté ses Ballons d’Or ?', ['Milan AC', 'Ajax Amsterdam', 'Inter Milan', 'PSV Eindhoven'], 0, 'Trois trophées en 1988, 1989 et 1992.'),
+  q('moyen', 'devine', 'Il a remporté le Ballon d’Or 2004 après une saison pleine au Milan AC.', ['Andriy Shevchenko', 'Kaká', 'Ronaldinho', 'Deco'], 0, 'L’attaquant ukrainien, devant Deco et Ronaldinho.'),
+  q('moyen', 'qcm', 'Quel joueur allemand a remporté le Ballon d’Or 1996 ?', ['Matthias Sammer', 'Jürgen Klinsmann', 'Oliver Kahn', 'Lothar Matthäus'], 0, 'Le libéro de Dortmund, après l’Euro remporté avec l’Allemagne.'),
+  q('moyen', 'qcm', 'Combien de Ballons d’Or Johan Cruyff a-t-il remportés ?', ['Trois', 'Deux', 'Un', 'Quatre'], 0, '1971, 1973 et 1974.'),
+  q('moyen', 'date', 'En quelle année le Ballon d’Or a-t-il fusionné avec le trophée de la FIFA ?', ['2010', '2006', '2014', '2008'], 0, 'La fusion a duré de 2010 à 2015 sous le nom de FIFA Ballon d’Or.'),
+  q('moyen', 'qcm', 'Quel joueur a remporté le Ballon d’Or 2005 ?', ['Ronaldinho', 'Frank Lampard', 'Steven Gerrard', 'Samuel Eto’o'], 0, 'Au sommet de son art avec le Barça.'),
+
+  // ---------------------------- DIFFICILE ----------------------------
+  q('difficile', 'devine', 'Seul gardien de but de l’histoire à avoir remporté le Ballon d’Or.', ['Lev Yachine', 'Dino Zoff', 'Gianluigi Buffon', 'Oliver Kahn'], 0, 'L’« araignée noire » soviétique, lauréate en 1963.'),
+  q('difficile', 'qcm', 'Quel trophée, créé en 2019, récompense le meilleur gardien de l’année ?', ['Le trophée Yachine', 'Le trophée Zamora', 'Le Gant d’or', 'Le trophée Kopa'], 0, 'Nommé en hommage au seul gardien lauréat du Ballon d’Or.'),
+  q('difficile', 'qcm', 'Quel trophée récompense le meilleur joueur de moins de vingt et un ans depuis 2018 ?', ['Le trophée Kopa', 'Le trophée Yachine', 'Le Golden Boy', 'Le trophée Puskás'], 0, 'Remporté la première année par Kylian Mbappé.'),
+  q('difficile', 'qcm', 'Qui a remporté le tout premier Ballon d’Or, en 1956 ?', ['Stanley Matthews', 'Alfredo Di Stéfano', 'Raymond Kopa', 'Ferenc Puskás'], 0, 'L’ailier anglais avait alors quarante et un ans.'),
+  q('difficile', 'qcm', 'Combien de Ballons d’Or Alfredo Di Stéfano a-t-il remportés ?', ['Deux', 'Trois', 'Un', 'Quatre'], 0, '1957 et 1959.'),
+  q('difficile', 'intrus', 'Lequel de ces joueurs n’a jamais remporté le Ballon d’Or ?', ['Paolo Maldini', 'Matthias Sammer', 'Igor Belanov', 'Oleg Blokhine'], 0, 'Maldini, pourtant l’un des plus grands défenseurs, n’a jamais gagné.'),
+  q('difficile', 'date', 'En quelle année le Ballon d’Or s’est-il ouvert aux joueurs non européens ?', ['1995', '1991', '1999', '1988'], 0, 'George Weah en profite immédiatement.'),
+  q('difficile', 'qcm', 'Quel joueur a remporté le Ballon d’Or 1993 ?', ['Roberto Baggio', 'Dennis Bergkamp', 'Eric Cantona', 'Romário'], 0, 'La « queue de cheval divine » de la Juventus.'),
+  q('difficile', 'vrai-faux', 'Un joueur a déjà remporté le Ballon d’Or sans jouer dans un club européen.', VF, 1, 'Le règlement a longtemps imposé un club européen, et aucun lauréat n’a fait exception.'),
+  q('difficile', 'qcm', 'Quelle joueuse a remporté le premier Ballon d’Or féminin, en 2018 ?', ['Ada Hegerberg', 'Megan Rapinoe', 'Alexia Putellas', 'Wendie Renard'], 0, 'L’attaquante norvégienne de l’Olympique lyonnais.'),
+  q('difficile', 'qcm', 'Quelle joueuse espagnole a remporté le Ballon d’Or féminin en 2021 et 2022 ?', ['Alexia Putellas', 'Aitana Bonmatí', 'Jennifer Hermoso', 'Irene Paredes'], 0, 'La capitaine du Barça, deux fois de suite.'),
+  q('difficile', 'qcm', 'Quel joueur a remporté le Ballon d’Or 1986 ?', ['Igor Belanov', 'Diego Maradona', 'Gary Lineker', 'Emilio Butragueño'], 0, 'Maradona n’était pas éligible, le trophée étant alors réservé aux Européens.'),
+  q('difficile', 'devine', 'Il a remporté le Ballon d’Or 1990 après avoir été capitaine de la RFA championne du monde.', ['Lothar Matthäus', 'Jürgen Klinsmann', 'Rudi Völler', 'Andreas Brehme'], 0, 'Le seul Ballon d’Or de sa longue carrière.'),
+  q('difficile', 'qcm', 'Quel club a vu le plus de ses joueurs remporter le Ballon d’Or ?', ['Barcelone', 'Real Madrid', 'Milan AC', 'Juventus'], 0, 'Porté par les huit trophées de Messi.'),
+  q('difficile', 'qcm', 'Quel joueur néerlandais a remporté le Ballon d’Or 1987 ?', ['Ruud Gullit', 'Marco van Basten', 'Frank Rijkaard', 'Ronald Koeman'], 0, 'L’année de son arrivée au Milan AC.'),
+  q('difficile', 'qcm', 'Quel joueur a remporté le Ballon d’Or 2012 ?', ['Lionel Messi', 'Andrés Iniesta', 'Cristiano Ronaldo', 'Xavi'], 0, 'Son quatrième d’affilée, l’année de ses quatre-vingt-onze buts civils.'),
+];

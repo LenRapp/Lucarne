@@ -1,0 +1,60 @@
+import { VF, make } from './make';
+
+const q = make('euro-et-nations');
+
+export const EURO_ET_NATIONS = [
+  // ----------------------------- FACILE -----------------------------
+  q('facile', 'qcm', 'Tous les combien d’années a lieu le Championnat d’Europe des nations ?', ['Quatre ans', 'Deux ans', 'Trois ans', 'Cinq ans'], 0, 'En alternance avec la Coupe du monde.'),
+  q('facile', 'qcm', 'Quel pays a remporté l’Euro 2024 ?', ['Espagne', 'Angleterre', 'France', 'Allemagne'], 0, 'Un 2-1 en finale contre l’Angleterre à Berlin.'),
+  q('facile', 'qcm', 'Quel pays a remporté l’Euro 2020, disputé en 2021 ?', ['Italie', 'Angleterre', 'Espagne', 'Danemark'], 0, 'Aux tirs au but contre l’Angleterre, à Wembley.'),
+  q('facile', 'qcm', 'Quel pays a remporté l’Euro 2016 ?', ['Portugal', 'France', 'Allemagne', 'Pays de Galles'], 0, 'Malgré la sortie sur blessure de Cristiano Ronaldo en finale.'),
+  q('facile', 'vrai-faux', 'L’Espagne a remporté l’Euro deux fois de suite, en 2008 et 2012.', VF, 0, 'Avec une Coupe du monde entre les deux, en 2010.'),
+  q('facile', 'qcm', 'Comment s’appelle le championnat continental sud-américain des sélections ?', ['La Copa América', 'La Coupe d’Afrique', 'La Gold Cup', 'La Coupe d’Asie'], 0, 'La plus ancienne compétition continentale de sélections.'),
+  q('facile', 'qcm', 'Comment s’appelle le championnat continental africain des sélections ?', ['La Coupe d’Afrique des nations', 'La Copa América', 'La Gold Cup', 'Le Championnat arabe'], 0, 'Souvent abrégée en CAN.'),
+  q('facile', 'qcm', 'Quel pays a remporté la Copa América 2021 et 2024 ?', ['Argentine', 'Brésil', 'Uruguay', 'Colombie'], 0, 'Deux titres consécutifs, encadrant la Coupe du monde 2022.'),
+  q('facile', 'devine', 'Pays nordique, vainqueur surprise de l’Euro 1992 alors qu’il était repêché au dernier moment.', ['Danemark', 'Suède', 'Norvège', 'Finlande'], 0, 'Repêché après l’exclusion de la Yougoslavie.'),
+  q('facile', 'qcm', 'Quel pays a remporté la Ligue des nations 2021 ?', ['France', 'Espagne', 'Italie', 'Belgique'], 0, 'Après être revenue de 0-2 contre l’Espagne en finale.'),
+  q('facile', 'vrai-faux', 'Le Brésil a déjà remporté la Copa América.', VF, 0, 'Neuf fois, dont la dernière en 2019 à domicile.'),
+  q('facile', 'qcm', 'Combien d’équipes participaient à l’Euro 2020 ?', ['Vingt-quatre', 'Seize', 'Trente-deux', 'Vingt'], 0, 'Le format à vingt-quatre existe depuis 2016.'),
+  q('facile', 'qcm', 'Quelle sélection a remporté l’Euro 2004 contre toute attente ?', ['Grèce', 'Portugal', 'République tchèque', 'Pays-Bas'], 0, 'Elle bat le Portugal en ouverture puis en finale.'),
+  q('facile', 'qcm', 'Dans quelle confédération joue le Japon ?', ['L’AFC, en Asie', 'L’UEFA', 'La CONMEBOL', 'La CAF'], 0, 'Il dispute la Coupe d’Asie des nations.'),
+  q('facile', 'qcm', 'Quel pays a remporté l’Euro 1984 ?', ['France', 'Espagne', 'Portugal', 'Danemark'], 0, 'À domicile, portée par Michel Platini.'),
+  q('facile', 'vrai-faux', 'Une sélection peut participer à la Coupe du monde sans avoir gagné sa compétition continentale.', VF, 0, 'La qualification se joue sur des tours éliminatoires séparés.'),
+  q('facile', 'qcm', 'Dans quel pays s’est jouée la Copa América 2021, remportée par l’Argentine ?', ['Le Brésil', 'L’Argentine', 'La Colombie', 'Le Chili'], 0, 'Une finale gagnée au Maracanã, chez le grand rival.'),
+
+  // ------------------------------ MOYEN ------------------------------
+  q('moyen', 'qcm', 'Quel pays détient le record de titres européens ?', ['Espagne', 'Allemagne', 'Italie', 'France'], 0, 'Quatre titres : 1964, 2008, 2012 et 2024.'),
+  q('moyen', 'qcm', 'Qui a inscrit le but en or de la finale de l’Euro 1996 ?', ['Oliver Bierhoff', 'Jürgen Klinsmann', 'Matthias Sammer', 'Andreas Möller'], 0, 'Le premier but en or de l’histoire d’une grande compétition.'),
+  q('moyen', 'qcm', 'Quelle sélection a remporté la Coupe d’Afrique des nations le plus souvent ?', ['Égypte', 'Cameroun', 'Ghana', 'Nigeria'], 0, 'Sept titres, dont trois d’affilée au milieu des années 2000.'),
+  q('moyen', 'date', 'En quelle année s’est tenu le premier Championnat d’Europe des nations ?', ['1960', '1954', '1964', '1968'], 0, 'Remporté par l’Union soviétique en France.'),
+  q('moyen', 'qcm', 'Quel pays a remporté l’Euro 1988 ?', ['Pays-Bas', 'URSS', 'RFA', 'Italie'], 0, 'Le seul grand titre néerlandais, avec la volée de Van Basten.'),
+  q('moyen', 'devine', 'Son penalty en finale de l’Euro 1976 a donné son nom à un geste technique.', ['Antonín Panenka', 'Ivo Viktor', 'Zdeněk Nehoda', 'Marián Masný'], 0, 'Une pichenette au centre du but, face à Sepp Maier.'),
+  q('moyen', 'qcm', 'Quelle sélection a remporté la Ligue des nations lors de sa première édition, en 2019 ?', ['Portugal', 'Pays-Bas', 'Angleterre', 'Suisse'], 0, 'À domicile, contre les Pays-Bas.'),
+  q('moyen', 'qcm', 'Quelle sélection a remporté la Ligue des nations 2023 ?', ['Espagne', 'Croatie', 'Italie', 'Pays-Bas'], 0, 'Aux tirs au but contre la Croatie.'),
+  q('moyen', 'intrus', 'Laquelle de ces sélections n’a jamais remporté l’Euro ?', ['Angleterre', 'Grèce', 'Danemark', 'République tchèque'], 0, 'L’Angleterre a perdu les finales 2020 et 2024.'),
+  q('moyen', 'qcm', 'Quel pays a remporté la Coupe d’Asie des nations le plus souvent ?', ['Japon', 'Corée du Sud', 'Iran', 'Arabie saoudite'], 0, 'Quatre titres, devant les trois de l’Iran et de l’Arabie saoudite.'),
+  q('moyen', 'qcm', 'Quelle sélection a atteint la finale de l’Euro 2020 à domicile ?', ['Angleterre', 'Italie', 'Danemark', 'Espagne'], 0, 'La finale se jouait à Wembley.'),
+  q('moyen', 'vrai-faux', 'L’Allemagne a remporté l’Euro trois fois.', VF, 0, '1972, 1980 et 1996.'),
+  q('moyen', 'qcm', 'Quel joueur détient le record de buts en phase finale d’Euro ?', ['Cristiano Ronaldo', 'Michel Platini', 'Alan Shearer', 'Antoine Griezmann'], 0, 'Toutes éditions confondues, devant les neuf de Platini en 1984.'),
+  q('moyen', 'qcm', 'Quel pays a accueilli l’Euro 2024 ?', ['Allemagne', 'Italie', 'Angleterre', 'Pologne et Ukraine'], 0, 'Première grande compétition allemande depuis 2006.'),
+  q('moyen', 'qcm', 'Combien de pays ont coorganisé l’Euro 2020 ?', ['Onze', 'Deux', 'Quatre', 'Vingt-quatre'], 0, 'Un format itinérant pour les soixante ans de la compétition.'),
+  q('moyen', 'qcm', 'Quelle sélection africaine a atteint les quarts de finale de la Coupe du monde en 1990 ?', ['Cameroun', 'Sénégal', 'Nigeria', 'Algérie'], 0, 'Portée par Roger Milla et ses danses au poteau de corner.'),
+
+  // ---------------------------- DIFFICILE ----------------------------
+  q('difficile', 'qcm', 'Quelle sélection a remporté le premier Euro, en 1960 ?', ['Union soviétique', 'Yougoslavie', 'France', 'Tchécoslovaquie'], 0, 'Avec Lev Yachine dans les buts.'),
+  q('difficile', 'qcm', 'Quelle sélection a remporté l’Euro 1976 ?', ['Tchécoslovaquie', 'RFA', 'Pays-Bas', 'Yougoslavie'], 0, 'Aux tirs au but, conclus par la fameuse « panenka ».'),
+  q('difficile', 'qcm', 'Quelle sélection détient le record de titres en Copa América ?', ['Argentine', 'Uruguay', 'Brésil', 'Chili'], 0, 'L’Argentine est passée devant l’Uruguay en 2024.'),
+  q('difficile', 'devine', 'Sélection européenne qui a disputé sa première phase finale d’Euro en 2016 et atteint les demi-finales.', ['Pays de Galles', 'Islande', 'Albanie', 'Slovaquie'], 0, 'Portée par Gareth Bale et Aaron Ramsey.'),
+  q('difficile', 'qcm', 'Quelle sélection a éliminé l’Angleterre en huitièmes de finale de l’Euro 2016 ?', ['Islande', 'Pays de Galles', 'Irlande', 'Slovaquie'], 0, 'Une des plus grandes surprises de l’histoire de la compétition.'),
+  q('difficile', 'date', 'En quelle année la Coupe d’Afrique des nations a-t-elle été disputée pour la première fois ?', ['1957', '1963', '1970', '1950'], 0, 'Avec seulement trois participants.'),
+  q('difficile', 'qcm', 'Quelle sélection a remporté la Gold Cup le plus souvent ?', ['Mexique', 'États-Unis', 'Canada', 'Costa Rica'], 0, 'Le championnat continental d’Amérique du Nord, centrale et des Caraïbes.'),
+  q('difficile', 'intrus', 'Laquelle de ces sélections n’a jamais disputé de Coupe du monde ?', ['Finlande', 'Islande', 'Slovénie', 'Ukraine'], 0, 'La Finlande n’a jamais atteint une phase finale mondiale.'),
+  q('difficile', 'qcm', 'Quelle sélection a remporté la Coupe des confédérations en 2013 ?', ['Brésil', 'Espagne', 'Italie', 'Uruguay'], 0, 'Un 3-0 en finale contre l’Espagne championne du monde.'),
+  q('difficile', 'vrai-faux', 'L’Italie a franchi deux tours aux tirs au but lors de son Euro 2020 victorieux.', VF, 0, 'En demi-finale contre l’Espagne, puis en finale contre l’Angleterre.'),
+  q('difficile', 'qcm', 'Quel joueur a marqué lors de cinq phases finales d’Euro différentes ?', ['Cristiano Ronaldo', 'Zlatan Ibrahimović', 'Luka Modrić', 'Robert Lewandowski'], 0, 'De 2004 à 2020, un record de longévité.'),
+  q('difficile', 'qcm', 'Quelle sélection a atteint la demi-finale de la Coupe du monde 2002 ?', ['Corée du Sud', 'Sénégal', 'Mexique', 'Japon'], 0, 'Après avoir éliminé l’Italie puis l’Espagne.'),
+  q('difficile', 'qcm', 'Quelle sélection a remporté les Jeux olympiques de football en 2021 ?', ['Brésil', 'Espagne', 'Argentine', 'Mexique'], 0, 'Un second titre olympique consécutif après 2016.'),
+  q('difficile', 'qcm', 'Combien de sélections participeront à la Coupe du monde 2026 ?', ['Quarante-huit', 'Trente-deux', 'Quarante', 'Soixante-quatre'], 0, 'Une édition coorganisée par trois pays d’Amérique du Nord.'),
+  q('difficile', 'devine', 'Sélection qui a disputé trois finales de Coupe du monde sans jamais l’emporter.', ['Pays-Bas', 'Hongrie', 'Tchécoslovaquie', 'Suède'], 0, '1974, 1978 et 2010.'),
+  q('difficile', 'qcm', 'Quel pays a accueilli l’Euro 2012 avec la Pologne ?', ['Ukraine', 'Biélorussie', 'Slovaquie', 'Lituanie'], 0, 'La finale s’est jouée à Kiev.'),
+];

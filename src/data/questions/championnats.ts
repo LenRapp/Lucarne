@@ -1,0 +1,60 @@
+import { VF, make } from './make';
+
+const q = make('championnats');
+
+export const CHAMPIONNATS = [
+  // ----------------------------- FACILE -----------------------------
+  q('facile', 'qcm', 'Comment s’appelle le championnat de première division anglais ?', ['La Premier League', 'La Liga', 'La Serie A', 'La Bundesliga'], 0, 'Elle porte ce nom depuis 1992.'),
+  q('facile', 'qcm', 'Comment s’appelle le championnat de première division espagnol ?', ['La Liga', 'La Primeira', 'La Serie A', 'L’Eredivisie'], 0, 'Dominée historiquement par le Real et le Barça.'),
+  q('facile', 'qcm', 'Comment s’appelle le championnat de première division italien ?', ['La Serie A', 'La Liga', 'La Primera', 'La Pro League'], 0, 'La Serie B est la deuxième division.'),
+  q('facile', 'qcm', 'Comment s’appelle le championnat de première division allemand ?', ['La Bundesliga', 'L’Eredivisie', 'La Super League', 'La Liga'], 0, 'Créée en 1963.'),
+  q('facile', 'qcm', 'Combien de clubs compte la Premier League ?', ['Vingt', 'Dix-huit', 'Vingt-deux', 'Seize'], 0, 'Soit trente-huit journées par saison.'),
+  q('facile', 'qcm', 'Combien de clubs compte la Bundesliga ?', ['Dix-huit', 'Vingt', 'Seize', 'Vingt-deux'], 0, 'Un format plus court, à trente-quatre journées.'),
+  q('facile', 'vrai-faux', 'Une victoire rapporte trois points en championnat.', VF, 0, 'La règle s’est généralisée dans les années 1990.'),
+  q('facile', 'qcm', 'Combien de points rapporte un match nul ?', ['Un', 'Zéro', 'Deux', 'Trois'], 0, 'Un point pour chacune des deux équipes.'),
+  q('facile', 'qcm', 'Quel club domine la Ligue 1 depuis les années 2010 ?', ['Paris Saint-Germain', 'Olympique de Marseille', 'Lyon', 'Lille'], 0, 'Porté par les investissements qataris depuis 2011.'),
+  q('facile', 'devine', 'Championnat néerlandais, il a vu éclore l’Ajax, le PSV et Feyenoord.', ['L’Eredivisie', 'La Jupiler Pro League', 'La Superliga', 'L’Allsvenskan'], 0, 'Réputé pour la formation des jeunes.'),
+  q('facile', 'qcm', 'Quel championnat le FC Porto dispute-t-il ?', ['Le championnat portugais', 'Le championnat espagnol', 'Le championnat brésilien', 'Le championnat belge'], 0, 'La Primeira Liga.'),
+  q('facile', 'vrai-faux', 'En championnat, les équipes se rencontrent une fois à domicile et une fois à l’extérieur.', VF, 0, 'C’est le principe du championnat aller-retour.'),
+  q('facile', 'qcm', 'Quel club a remporté le plus de titres en Premier League depuis sa création en 1992 ?', ['Manchester United', 'Manchester City', 'Chelsea', 'Arsenal'], 0, 'Treize titres, dont huit sous Alex Ferguson dans les années 1990 et 2000.'),
+  q('facile', 'qcm', 'Dans quel championnat joue le Celtic Glasgow ?', ['Le championnat écossais', 'Le championnat anglais', 'Le championnat irlandais', 'Le championnat gallois'], 0, 'La Scottish Premiership.'),
+  q('facile', 'qcm', 'Combien d’équipes descendent généralement de Ligue 1 chaque saison ?', ['Deux, plus un barragiste', 'Quatre directement', 'Une seule', 'Aucune'], 0, 'Le format des relégations a varié ces dernières saisons.'),
+  q('facile', 'qcm', 'Quel trophée récompense le meilleur buteur d’un championnat ?', ['Le Soulier d’or national', 'Le Ballon d’or', 'Le Gant d’or', 'La Coupe'], 0, 'Souvent appelé « Pichichi » en Espagne.'),
+  q('facile', 'vrai-faux', 'Le championnat belge s’appelle la Jupiler Pro League.', VF, 0, 'Du nom de son sponsor historique.'),
+
+  // ------------------------------ MOYEN ------------------------------
+  q('moyen', 'qcm', 'Quel joueur détient le record de buts sur une saison de Premier League à trente-huit journées ?', ['Erling Haaland', 'Mohamed Salah', 'Alan Shearer', 'Harry Kane'], 0, 'Trente-six buts lors de sa première saison à Manchester City.'),
+  q('moyen', 'qcm', 'Qui est le meilleur buteur de l’histoire de la Premier League ?', ['Alan Shearer', 'Wayne Rooney', 'Harry Kane', 'Thierry Henry'], 0, 'Deux cent soixante buts, un record qui tient depuis 2006.'),
+  q('moyen', 'qcm', 'Comment s’appelle le trophée du meilleur buteur de la Liga ?', ['Le Pichichi', 'Le Zamora', 'Le Capocannoniere', 'Le Torpedo'], 0, 'Le Zamora récompense, lui, le meilleur gardien.'),
+  q('moyen', 'qcm', 'Comment s’appelle le titre de champion d’Italie ?', ['Le Scudetto', 'Le Tricolore', 'La Coppa', 'Le Calcio'], 0, 'Le petit écusson aux couleurs italiennes cousu sur le maillot.'),
+  q('moyen', 'qcm', 'Quel club a remporté la Serie A neuf fois d’affilée entre 2012 et 2020 ?', ['Juventus', 'Inter Milan', 'Milan AC', 'Naples'], 0, 'Une domination sans précédent dans le calcio.'),
+  q('moyen', 'vrai-faux', 'Le Bayern Munich a remporté onze Bundesligas consécutives.', VF, 0, 'De 2013 à 2023, avant d’être stoppé par Leverkusen.'),
+  q('moyen', 'devine', 'Championnat où la règle du « 50+1 » impose que les clubs restent majoritairement contrôlés par leurs membres.', ['La Bundesliga', 'La Premier League', 'La Liga', 'La Ligue 1'], 0, 'Une particularité allemande qui limite les rachats.'),
+  q('moyen', 'qcm', 'Quel club français a été champion de France en 2021 ?', ['Lille', 'Paris Saint-Germain', 'Monaco', 'Lyon'], 0, 'Un titre décroché à la dernière journée devant le PSG.'),
+  q('moyen', 'qcm', 'Quel club a terminé une saison de Premier League avec cent points ?', ['Manchester City', 'Liverpool', 'Chelsea', 'Arsenal'], 0, 'En 2017-2018, sous Pep Guardiola.'),
+  q('moyen', 'intrus', 'Lequel de ces championnats n’existe pas sous ce nom ?', ['La Primera Division anglaise', 'La Serie A italienne', 'La Liga espagnole', 'L’Eredivisie néerlandaise'], 0, 'L’Angleterre parle de Premier League, pas de Primera Division.'),
+  q('moyen', 'qcm', 'Quel club a remporté la Liga en 2014, s’intercalant entre le Real et le Barça ?', ['Atlético de Madrid', 'Valence', 'Séville', 'Villarreal'], 0, 'Un titre décroché au Camp Nou lors de la dernière journée.'),
+  q('moyen', 'qcm', 'Dans quel championnat évolue le club de Flamengo ?', ['Le championnat brésilien', 'Le championnat argentin', 'Le championnat portugais', 'Le championnat mexicain'], 0, 'Le Brasileirão.'),
+  q('moyen', 'date', 'En quelle année la Premier League a-t-elle remplacé la First Division ?', ['1992', '1988', '1996', '1990'], 0, 'Une réforme née de la volonté des clubs de capter les droits télévisés.'),
+  q('moyen', 'qcm', 'Quel club a remporté la Ligue 1 en 2017 avec une équipe pleine de jeunes dont Mbappé ?', ['AS Monaco', 'Paris Saint-Germain', 'Nice', 'Lyon'], 0, 'Le seul titre à échapper au PSG entre 2013 et 2021.'),
+  q('moyen', 'qcm', 'Quel championnat compte traditionnellement une trêve hivernale longue ?', ['La Bundesliga', 'La Premier League', 'La Liga', 'La Ligue 1'], 0, 'L’Angleterre, au contraire, joue entre Noël et le Nouvel An.'),
+  q('moyen', 'qcm', 'Quel club italien a remporté la Serie A en 2021 après onze ans d’attente ?', ['Inter Milan', 'Milan AC', 'Naples', 'AS Rome'], 0, 'Sous la direction d’Antonio Conte.'),
+
+  // ---------------------------- DIFFICILE ----------------------------
+  q('difficile', 'qcm', 'Quel club a remporté le premier championnat d’Angleterre, en 1889 ?', ['Preston North End', 'Aston Villa', 'Everton', 'Sunderland'], 0, 'Et sans perdre le moindre match.'),
+  q('difficile', 'date', 'En quelle année la Ligue 1 française a-t-elle été créée sous forme professionnelle ?', ['1932', '1919', '1945', '1950'], 0, 'Sous le nom de Division nationale.'),
+  q('difficile', 'qcm', 'Qui a hérité du titre de champion de France 1993, retiré à l’Olympique de Marseille ?', ['Personne, le titre n’a jamais été réattribué', 'Le Paris Saint-Germain', 'Monaco', 'Bordeaux'], 0, 'La saison 1992-1993 figure sans champion au palmarès.'),
+  q('difficile', 'qcm', 'Combien de buts Lionel Messi a-t-il inscrits lors de la saison 2011-2012 en Liga ?', ['Cinquante', 'Quarante', 'Quarante-six', 'Cinquante-cinq'], 0, 'Un record absolu pour un championnat européen majeur.'),
+  q('difficile', 'devine', 'Championnat portugais dont le nom officiel est Primeira Liga.', ['Le championnat du Portugal', 'Le championnat du Brésil', 'Le championnat d’Espagne', 'Le championnat de Grèce'], 0, 'Dominé par le trio Benfica, Porto et Sporting.'),
+  q('difficile', 'qcm', 'Quel club a été relégué de Serie A en 2006 à la suite du scandale des matchs arrangés ?', ['Juventus', 'Milan AC', 'Lazio', 'Fiorentina'], 0, 'L’affaire du Calciopoli lui a coûté deux titres.'),
+  q('difficile', 'intrus', 'Lequel de ces clubs n’a jamais été relégué de Serie A ?', ['Inter Milan', 'Juventus', 'Naples', 'Lazio'], 0, 'L’Inter est le seul club italien à n’avoir jamais quitté l’élite.'),
+  q('difficile', 'qcm', 'Quel joueur a égalé en 2019-2020 le record de vingt passes décisives sur une saison de Premier League ?', ['Kevin De Bruyne', 'Mesut Özil', 'Cesc Fàbregas', 'Trent Alexander-Arnold'], 0, 'Il rejoint Thierry Henry, auteur du même total en 2002-2003.'),
+  q('difficile', 'vrai-faux', 'Un club promu a déjà remporté la Premier League dans la foulée.', VF, 1, 'Nottingham Forest l’avait fait en 1978, mais avant l’ère Premier League.'),
+  q('difficile', 'qcm', 'Quel club allemand a remporté la Bundesliga en 2009 ?', ['Wolfsburg', 'Stuttgart', 'Werder Brême', 'Schalke 04'], 0, 'Porté par le duo Džeko-Grafite.'),
+  q('difficile', 'qcm', 'Quel club a remporté la Liga en 2000, seul titre espagnol de son histoire récente ?', ['La Corogne', 'Valence', 'Séville', 'Villarreal'], 0, 'Le « Super Dépor » du début des années 2000.'),
+  q('difficile', 'qcm', 'Combien de titres de champion d’Écosse le Celtic et les Rangers se partagent-ils à eux deux ?', ['Plus de cent', 'Environ soixante', 'Environ quarante', 'Environ quatre-vingts'], 0, 'Une domination quasi totale depuis plus d’un siècle.'),
+  q('difficile', 'date', 'En quelle année la Serie A est-elle passée à dix-huit clubs avant de revenir à vingt ?', ['1988', '1994', '2004', '1998'], 0, 'Le format est repassé à vingt clubs en 2004.'),
+  q('difficile', 'qcm', 'Quel club a remporté la Liga 2009-2010 avec quatre-vingt-dix-neuf points ?', ['Barcelone', 'Real Madrid', 'Valence', 'Séville'], 0, 'Le Real en avait pourtant totalisé quatre-vingt-seize la même saison.'),
+  q('difficile', 'qcm', 'Dans quelle partie du monde trouve-t-on les tournois « Apertura » et « Clausura » ?', ['En Amérique latine', 'En Scandinavie', 'En Asie de l’Est', 'En Afrique du Nord'], 0, 'Deux tournois par saison, chacun avec son propre champion.'),
+  q('difficile', 'qcm', 'Quel club français a été champion de France en 1996 ?', ['Auxerre', 'Nantes', 'Monaco', 'Lens'], 0, 'Un doublé coupe-championnat sous Guy Roux.'),
+];

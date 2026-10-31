@@ -85,8 +85,10 @@ button {
 
 /* — Entrée d'écran : chaque élément arrive de +80 px, 40 ms de décalage — */
 .lc-enter > * {
+  /* Rang de l'élément dans la cascade ; surchargé en ligne par chaque écran. */
+  --i: 0;
   animation: lc-rise var(--t-screen) var(--ease) backwards;
-  animation-delay: calc(var(--i, 0) * var(--stagger));
+  animation-delay: calc(var(--i) * var(--stagger));
 }
 
 @keyframes lc-rise {

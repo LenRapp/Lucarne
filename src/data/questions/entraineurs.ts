@@ -1,0 +1,60 @@
+import { VF, make } from './make';
+
+const q = make('entraineurs');
+
+export const ENTRAINEURS = [
+  // ----------------------------- FACILE -----------------------------
+  q('facile', 'devine', 'Écossais, il a dirigé Manchester United pendant plus de vingt-cinq ans.', ['Alex Ferguson', 'Matt Busby', 'Kenny Dalglish', 'David Moyes'], 0, 'Treize titres de champion d’Angleterre et deux Ligues des champions.'),
+  q('facile', 'qcm', 'Quel entraîneur a dirigé Arsenal pendant vingt-deux ans ?', ['Arsène Wenger', 'George Graham', 'Unai Emery', 'Mikel Arteta'], 0, 'De 1996 à 2018, avec la saison des Invincibles.'),
+  q('facile', 'qcm', 'Quel entraîneur est surnommé « the Special One » ?', ['José Mourinho', 'Pep Guardiola', 'Antonio Conte', 'Diego Simeone'], 0, 'Une formule lancée à son arrivée à Chelsea en 2004.'),
+  q('facile', 'qcm', 'Quel entraîneur a mené Liverpool au titre de champion d’Angleterre en 2020 ?', ['Jürgen Klopp', 'Brendan Rodgers', 'Rafael Benítez', 'Arne Slot'], 0, 'Trente ans après le précédent titre du club.'),
+  q('facile', 'qcm', 'Quel ancien joueur français est devenu sélectionneur des Bleus en 2012 ?', ['Didier Deschamps', 'Laurent Blanc', 'Zinédine Zidane', 'Thierry Henry'], 0, 'Il a mené la France au titre mondial six ans plus tard.'),
+  q('facile', 'vrai-faux', 'Pep Guardiola a été joueur du FC Barcelone avant d’en devenir l’entraîneur.', VF, 0, 'Milieu de terrain de la « Dream Team » de Cruyff.'),
+  q('facile', 'qcm', 'Dans un 4-4-2, combien de joueurs composent la ligne de milieu ?', ['Quatre', 'Deux', 'Trois', 'Cinq'], 0, 'Quatre défenseurs, quatre milieux et deux attaquants, plus le gardien.'),
+  q('facile', 'qcm', 'Que désigne un « 4-3-3 » ?', ['Une composition tactique', 'Un score', 'Un temps de jeu', 'Un classement'], 0, 'La répartition des joueurs par ligne.'),
+  q('facile', 'qcm', 'Quel entraîneur a remporté la Ligue des champions avec le Real Madrid en 2016, 2017 et 2018 ?', ['Zinédine Zidane', 'Carlo Ancelotti', 'Rafael Benítez', 'José Mourinho'], 0, 'Trois titres en trois saisons sur le banc.'),
+  q('facile', 'devine', 'Italien au sourcil relevé, il a entraîné le Milan, Chelsea, le PSG, le Bayern, Naples, Everton et le Real Madrid.', ['Carlo Ancelotti', 'Massimiliano Allegri', 'Antonio Conte', 'Roberto Mancini'], 0, 'Le premier entraîneur à avoir gagné les cinq grands championnats européens.'),
+  q('facile', 'vrai-faux', 'Un entraîneur peut être expulsé d’un match par l’arbitre.', VF, 0, 'Il doit alors quitter la zone technique.'),
+  q('facile', 'qcm', 'Comment appelle-t-on la zone où se tient l’entraîneur pendant le match ?', ['La zone technique', 'La surface de réparation', 'Le rond central', 'La ligne de but'], 0, 'Délimitée devant le banc de touche.'),
+  q('facile', 'qcm', 'Quel entraîneur argentin dirige l’Atlético de Madrid depuis 2011 ?', ['Diego Simeone', 'Mauricio Pochettino', 'Marcelo Bielsa', 'Jorge Sampaoli'], 0, 'Deux titres de champion d’Espagne et deux finales européennes.'),
+  q('facile', 'qcm', 'Qui était le sélectionneur de l’Argentine championne du monde en 2022 ?', ['Lionel Scaloni', 'Diego Simeone', 'Jorge Sampaoli', 'Alejandro Sabella'], 0, 'Ancien joueur, nommé presque par accident en 2018.'),
+  q('facile', 'qcm', 'Quel poste occupe un joueur placé devant la défense pour récupérer les ballons ?', ['Milieu défensif', 'Ailier', 'Latéral', 'Avant-centre'], 0, 'Souvent appelé « sentinelle » ou « numéro 6 ».'),
+  q('facile', 'vrai-faux', 'Un entraîneur peut modifier son système de jeu en cours de match.', VF, 0, 'C’est même l’un de ses principaux leviers.'),
+  q('facile', 'qcm', 'Quel entraîneur espagnol a mené le Barça au sextuplé en 2009 ?', ['Pep Guardiola', 'Luis Enrique', 'Frank Rijkaard', 'Tito Vilanova'], 0, 'Pour sa toute première saison chez les professionnels.'),
+
+  // ------------------------------ MOYEN ------------------------------
+  q('moyen', 'devine', 'Néerlandais, père du « football total », il a entraîné l’Ajax et les Pays-Bas de 1974.', ['Rinus Michels', 'Johan Cruyff', 'Leo Beenhakker', 'Guus Hiddink'], 0, 'Élu entraîneur du siècle par la FIFA.'),
+  q('moyen', 'qcm', 'Quel système défensif italien est fondé sur un libéro derrière la défense ?', ['Le catenaccio', 'Le tiki-taka', 'Le gegenpressing', 'Le WM'], 0, 'Littéralement « le verrou ».'),
+  q('moyen', 'qcm', 'Comment appelle-t-on le jeu de possession courte popularisé par le Barça et l’Espagne ?', ['Le tiki-taka', 'Le catenaccio', 'Le kick and rush', 'Le pressing haut'], 0, 'Des passes courtes et incessantes pour user l’adversaire.'),
+  q('moyen', 'qcm', 'Quel entraîneur allemand est associé au « gegenpressing » ?', ['Jürgen Klopp', 'Joachim Löw', 'Thomas Tuchel', 'Hansi Flick'], 0, 'Récupérer immédiatement le ballon après l’avoir perdu.'),
+  q('moyen', 'qcm', 'Quel entraîneur a remporté la Ligue Europa à quatre reprises ?', ['Unai Emery', 'José Mourinho', 'Rafael Benítez', 'Diego Simeone'], 0, 'Trois fois avec Séville, puis une avec Villarreal.'),
+  q('moyen', 'intrus', 'Lequel de ces entraîneurs n’a jamais remporté la Ligue des champions ?', ['Diego Simeone', 'Carlo Ancelotti', 'Jürgen Klopp', 'Pep Guardiola'], 0, 'Deux finales perdues avec l’Atlético, en 2014 et 2016.'),
+  q('moyen', 'qcm', 'Quel sélectionneur a mené l’Italie au titre mondial en 2006 ?', ['Marcello Lippi', 'Giovanni Trapattoni', 'Cesare Prandelli', 'Roberto Mancini'], 0, 'Avec une défense verrouillée par Cannavaro et Buffon.'),
+  q('moyen', 'qcm', 'Quel sélectionneur a mené l’Espagne au titre mondial en 2010 ?', ['Vicente del Bosque', 'Luis Aragonés', 'Julen Lopetegui', 'Luis Enrique'], 0, 'Deux ans après l’Euro remporté sous Aragonés.'),
+  q('moyen', 'devine', 'Argentin surnommé « El Loco », il a inspiré Guardiola, Simeone et Pochettino.', ['Marcelo Bielsa', 'César Luis Menotti', 'Carlos Bilardo', 'Ricardo La Volpe'], 0, 'Passé par l’Athletic Bilbao, l’OM et Leeds United.'),
+  q('moyen', 'qcm', 'Quel entraîneur a mené Chelsea à sa première Ligue des champions, en 2012 ?', ['Roberto Di Matteo', 'José Mourinho', 'André Villas-Boas', 'Carlo Ancelotti'], 0, 'Promu en cours de saison comme entraîneur intérimaire.'),
+  q('moyen', 'qcm', 'Quelle formation place trois défenseurs centraux et deux pistons ?', ['Le 3-5-2', 'Le 4-4-2', 'Le 4-2-3-1', 'Le 4-3-3'], 0, 'Les pistons couvrent tout le couloir, de la défense à l’attaque.'),
+  q('moyen', 'qcm', 'Comment appelle-t-on un attaquant qui décroche pour créer le surnombre au milieu ?', ['Un faux numéro 9', 'Un ailier inversé', 'Un libéro', 'Un piston'], 0, 'Messi a occupé ce rôle sous Guardiola.'),
+  q('moyen', 'vrai-faux', 'Le hors-jeu a été inventé après la Seconde Guerre mondiale.', VF, 1, 'La règle existe depuis le XIXe siècle, même si elle a beaucoup évolué.'),
+  q('moyen', 'qcm', 'Quel entraîneur a remporté le championnat d’Angleterre avec Chelsea puis le championnat d’Italie avec l’Inter ?', ['Antonio Conte', 'Carlo Ancelotti', 'Roberto Mancini', 'Maurizio Sarri'], 0, 'Un spécialiste du 3-5-2.'),
+  q('moyen', 'qcm', 'Quel sélectionneur a mené l’Allemagne au titre mondial en 2014 ?', ['Joachim Löw', 'Jürgen Klinsmann', 'Hansi Flick', 'Rudi Völler'], 0, 'Après huit ans à la tête de la sélection.'),
+  q('moyen', 'qcm', 'Comment appelle-t-on un ailier gaucher placé à droite pour rentrer sur son pied fort ?', ['Un ailier inversé', 'Un faux neuf', 'Un meneur reculé', 'Un latéral axial'], 0, 'Arjen Robben en a fait une signature.'),
+
+  // ---------------------------- DIFFICILE ----------------------------
+  q('difficile', 'devine', 'Italien, il a révolutionné le jeu avec le Milan AC de la fin des années 1980 et son pressing haut.', ['Arrigo Sacchi', 'Giovanni Trapattoni', 'Nereo Rocco', 'Fabio Capello'], 0, 'Deux Coupes d’Europe consécutives sans jamais avoir été joueur professionnel.'),
+  q('difficile', 'qcm', 'Quel entraîneur soviétique a développé une approche scientifique du football au Dynamo Kiev ?', ['Valeri Lobanovski', 'Konstantin Beskov', 'Oleg Romantsev', 'Anatoli Bychovets'], 0, 'Préparation physique et statistiques, dès les années 1970.'),
+  q('difficile', 'qcm', 'Quel entraîneur anglais a remporté deux Coupes d’Europe avec Nottingham Forest ?', ['Brian Clough', 'Bob Paisley', 'Bill Shankly', 'Don Revie'], 0, 'En 1979 et 1980, avec un club promu peu avant.'),
+  q('difficile', 'qcm', 'Quel entraîneur de Liverpool a remporté trois Coupes d’Europe entre 1977 et 1981 ?', ['Bob Paisley', 'Bill Shankly', 'Joe Fagan', 'Kenny Dalglish'], 0, 'Successeur de Shankly, longtemps resté dans son ombre.'),
+  q('difficile', 'qcm', 'Quelle formation historique, popularisée par Herbert Chapman à Arsenal, porte le nom de deux lettres ?', ['Le WM', 'Le MN', 'Le VX', 'Le TW'], 0, 'Trois défenseurs, deux milieux défensifs, deux milieux offensifs et trois attaquants.'),
+  q('difficile', 'devine', 'Sélectionneur argentin champion du monde en 1986, surnommé « el Narigón ».', ['Carlos Bilardo', 'César Luis Menotti', 'Alfio Basile', 'Daniel Passarella'], 0, 'Théoricien du 3-5-2 autour de Maradona.'),
+  q('difficile', 'intrus', 'Lequel de ces entraîneurs n’a jamais dirigé le Real Madrid ?', ['Pep Guardiola', 'José Mourinho', 'Fabio Capello', 'Vicente del Bosque'], 0, 'Guardiola n’a jamais entraîné le grand rival du Barça.'),
+  q('difficile', 'qcm', 'Quel entraîneur a remporté la Ligue des champions avec deux clubs différents en Allemagne et en Espagne ?', ['Jupp Heynckes', 'Ottmar Hitzfeld', 'Louis van Gaal', 'Udo Lattek'], 0, 'Le Real Madrid en 1998, puis le Bayern Munich en 2013.'),
+  q('difficile', 'qcm', 'Quel entraîneur a remporté la Ligue des champions avec Dortmund puis avec le Bayern ?', ['Ottmar Hitzfeld', 'Jupp Heynckes', 'Jürgen Klopp', 'Thomas Tuchel'], 0, '1997 avec Dortmund, 2001 avec le Bayern.'),
+  q('difficile', 'vrai-faux', 'Un entraîneur a déjà remporté la Coupe du monde après l’avoir gagnée comme joueur.', VF, 0, 'Zagallo, Beckenbauer et Deschamps l’ont réussi.'),
+  q('difficile', 'qcm', 'Quel Brésilien a été le premier à remporter la Coupe du monde comme joueur puis comme sélectionneur ?', ['Mário Zagallo', 'Pelé', 'Carlos Alberto Parreira', 'Telê Santana'], 0, 'Joueur en 1958 et 1962, sélectionneur en 1970.'),
+  q('difficile', 'qcm', 'Quel entraîneur néerlandais a imposé le 4-3-3 et la rotation au Barça et au Bayern ?', ['Louis van Gaal', 'Frank Rijkaard', 'Ronald Koeman', 'Guus Hiddink'], 0, 'Un adepte revendiqué de la discipline collective.'),
+  q('difficile', 'qcm', 'Quel sélectionneur a mené la Grèce à l’Euro 2004 ?', ['Otto Rehhagel', 'Fernando Santos', 'Giovanni Trapattoni', 'Dick Advocaat'], 0, 'Un Allemand surnommé « Roi Otto » en Grèce.'),
+  q('difficile', 'qcm', 'Quel entraîneur a remporté le championnat dans quatre pays différents ?', ['Giovanni Trapattoni', 'Carlo Ancelotti', 'Sven-Göran Eriksson', 'Fabio Capello'], 0, 'Italie, Allemagne, Portugal et Autriche.'),
+  q('difficile', 'devine', 'Entraîneur de Manchester City depuis 2016, il a gagné dans trois championnats différents.', ['Pep Guardiola', 'Roberto Mancini', 'Manuel Pellegrini', 'Mikel Arteta'], 0, 'Espagne, Allemagne et Angleterre.'),
+  q('difficile', 'qcm', 'Quel entraîneur a remporté la Ligue des champions 2024 avec le Real Madrid ?', ['Carlo Ancelotti', 'Zinédine Zidane', 'Santiago Solari', 'Xabi Alonso'], 0, 'Son cinquième sacre européen comme entraîneur, un record.'),
+];

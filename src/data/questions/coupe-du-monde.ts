@@ -1,0 +1,65 @@
+import { VF, make } from './make';
+
+const q = make('coupe-du-monde');
+
+export const COUPE_DU_MONDE = [
+  // ----------------------------- FACILE -----------------------------
+  q('facile', 'qcm', 'Quel pays a remporté la Coupe du monde 2018 ?', ['France', 'Croatie', 'Belgique', 'Brésil'], 0, 'La France bat la Croatie 4-2 en finale à Moscou.'),
+  q('facile', 'qcm', 'Quel pays a remporté la Coupe du monde 2022 ?', ['Argentine', 'France', 'Brésil', 'Maroc'], 0, 'L’Argentine s’impose aux tirs au but après un 3-3 d’anthologie.'),
+  q('facile', 'qcm', 'Combien d’étoiles le Brésil porte-t-il sur son maillot ?', ['Cinq', 'Trois', 'Quatre', 'Six'], 0, 'Le Brésil a gagné en 1958, 1962, 1970, 1994 et 2002.'),
+  q('facile', 'date', 'En quelle année la France a-t-elle remporté sa première Coupe du monde ?', ['1998', '1986', '2002', '1994'], 0, 'À domicile, avec un 3-0 contre le Brésil en finale.'),
+  q('facile', 'qcm', 'Quel pays a accueilli la toute première Coupe du monde, en 1930 ?', ['Uruguay', 'Italie', 'Brésil', 'France'], 0, 'L’Uruguay organise et remporte l’édition inaugurale.'),
+  q('facile', 'vrai-faux', 'La Coupe du monde a lieu tous les quatre ans.', VF, 0, 'Seules les guerres de 1942 et 1946 ont interrompu ce rythme.'),
+  q('facile', 'devine', 'Il a inscrit deux buts de la tête en finale 1998 et terminé sa carrière sur un carton rouge en finale 2006.', ['Zinédine Zidane', 'Didier Deschamps', 'Emmanuel Petit', 'Marcel Desailly'], 0, 'Zidane marque deux têtes contre le Brésil, puis sort sur un coup de tête en 2006.'),
+  q('facile', 'qcm', 'Quel pays a remporté la Coupe du monde 2014 ?', ['Allemagne', 'Argentine', 'Brésil', 'Pays-Bas'], 0, 'L’Allemagne bat l’Argentine 1-0 après prolongation, but de Götze.'),
+  q('facile', 'qcm', 'Dans quel pays s’est déroulée la Coupe du monde 2022 ?', ['Qatar', 'Émirats arabes unis', 'Arabie saoudite', 'Koweït'], 0, 'Première Coupe du monde organisée en hiver, en novembre et décembre.'),
+  q('facile', 'qcm', 'Quel joueur a soulevé le trophée en tant que capitaine de l’Argentine en 2022 ?', ['Lionel Messi', 'Ángel Di María', 'Emiliano Martínez', 'Julián Álvarez'], 0, 'À 35 ans, pour sa cinquième Coupe du monde.'),
+  q('facile', 'vrai-faux', 'Le Brésil est le pays le plus titré en Coupe du monde.', VF, 0, 'Cinq titres, devant l’Allemagne et l’Italie qui en comptent quatre.'),
+  q('facile', 'qcm', 'Quel pays a organisé la Coupe du monde 1998 ?', ['France', 'Espagne', 'Allemagne', 'Angleterre'], 0, 'Le Stade de France est inauguré pour l’occasion.'),
+  q('facile', 'qcm', 'Combien d’équipes participaient à la phase finale en 2018 ?', ['32', '24', '16', '48'], 0, 'Le format à 32 équipes a tenu de 1998 à 2022.'),
+  q('facile', 'qcm', 'Quel pays a remporté la Coupe du monde 2010 ?', ['Espagne', 'Pays-Bas', 'Allemagne', 'Uruguay'], 0, 'Premier et seul titre mondial espagnol, but d’Iniesta en prolongation.'),
+  q('facile', 'devine', 'Surnommé « le Roi », il est le seul joueur à avoir remporté trois Coupes du monde.', ['Pelé', 'Garrincha', 'Ronaldo', 'Zico'], 0, 'Pelé est sacré en 1958, 1962 et 1970 avec le Brésil.'),
+  q('facile', 'qcm', 'Quel continent a accueilli la Coupe du monde 2010 pour la première fois ?', ['L’Afrique', 'L’Asie', 'L’Océanie', 'L’Amérique du Nord'], 0, 'L’Afrique du Sud est le premier hôte africain.'),
+  q('facile', 'vrai-faux', 'L’Argentine a remporté trois Coupes du monde.', VF, 0, '1978, 1986 et 2022.'),
+
+  // ------------------------------ MOYEN ------------------------------
+  q('moyen', 'qcm', 'Quel était le score de la demi-finale Brésil – Allemagne en 2014 ?', ['1-7', '0-4', '2-5', '1-5'], 0, 'Le « Mineirazo » : cinq buts allemands en moins d’une demi-heure.'),
+  q('moyen', 'devine', 'Son but de la main en quart de finale 1986 est resté dans l’histoire sous le nom de « Main de Dieu ».', ['Diego Maradona', 'Jorge Valdano', 'Mario Kempes', 'Claudio Caniggia'], 0, 'Quatre minutes plus tard, il inscrivait le « but du siècle » contre la même Angleterre.'),
+  q('moyen', 'qcm', 'Qui a marqué le but en or de la finale 2014 pour l’Allemagne ?', ['Mario Götze', 'Thomas Müller', 'Miroslav Klose', 'André Schürrle'], 0, 'Entré en jeu, il marque à la 113e minute.'),
+  q('moyen', 'qcm', 'Contre quelle équipe la France a-t-elle perdu la finale 2006 ?', ['Italie', 'Allemagne', 'Portugal', 'Brésil'], 0, 'Défaite aux tirs au but après un 1-1.'),
+  q('moyen', 'date', 'En quelle année s’est déroulée la demi-finale France – RFA de Séville ?', ['1982', '1978', '1986', '1990'], 0, 'Un 3-3 après prolongation, puis une élimination aux tirs au but.'),
+  q('moyen', 'qcm', 'Qui a inscrit les deux buts du Brésil en finale 2002 ?', ['Ronaldo', 'Rivaldo', 'Ronaldinho', 'Cafu'], 0, 'Ronaldo termine aussi meilleur buteur du tournoi avec huit réalisations.'),
+  q('moyen', 'qcm', 'Quel pays a remporté la Coupe du monde 1966 ?', ['Angleterre', 'RFA', 'Portugal', 'Brésil'], 0, 'Seul titre anglais, à domicile, contre la RFA.'),
+  q('moyen', 'devine', 'Il a inscrit un triplé en finale de Coupe du monde, performance unique à ce jour.', ['Geoff Hurst', 'Pelé', 'Kylian Mbappé', 'Gerd Müller'], 0, 'Geoff Hurst en 1966 ; Mbappé a marqué trois fois en 2022 mais l’Argentine l’a emporté.'),
+  q('moyen', 'qcm', 'Quelle sélection africaine a atteint les demi-finales en 2022 ?', ['Maroc', 'Sénégal', 'Ghana', 'Cameroun'], 0, 'Première demi-finale mondiale pour une équipe africaine.'),
+  q('moyen', 'vrai-faux', 'L’Italie a remporté quatre Coupes du monde.', VF, 0, '1934, 1938, 1982 et 2006.'),
+  q('moyen', 'qcm', 'Qui a remporté le Soulier d’or de la Coupe du monde 2018 ?', ['Harry Kane', 'Antoine Griezmann', 'Romelu Lukaku', 'Kylian Mbappé'], 0, 'Six buts pour l’attaquant anglais.'),
+  q('moyen', 'qcm', 'Quel pays a été sacré en 1954 lors du « Miracle de Berne » ?', ['RFA', 'Hongrie', 'Autriche', 'Uruguay'], 0, 'La RFA renverse la Hongrie de Puskás, invaincue depuis quatre ans.'),
+  q('moyen', 'date', 'En quelle année l’Espagne a-t-elle disputé sa première finale de Coupe du monde ?', ['2010', '1982', '1994', '2006'], 0, 'Elle la remporte dans la foulée contre les Pays-Bas.'),
+  q('moyen', 'intrus', 'Lequel de ces pays n’a jamais remporté la Coupe du monde ?', ['Pays-Bas', 'Uruguay', 'Angleterre', 'Espagne'], 0, 'Les Pays-Bas ont perdu trois finales : 1974, 1978 et 2010.'),
+  q('moyen', 'qcm', 'Quel joueur français a été élu meilleur joueur de la Coupe du monde 1998 ?', ['Zinédine Zidane', 'Lilian Thuram', 'Fabien Barthez', 'Youri Djorkaeff'], 0, 'Le Ballon d’or du tournoi lui revient après sa finale à deux buts.'),
+  q('moyen', 'qcm', 'Combien de buts Kylian Mbappé a-t-il inscrits lors de la finale 2022 ?', ['Trois', 'Deux', 'Un', 'Quatre'], 0, 'Un triplé, dont deux buts en moins de deux minutes.'),
+  q('moyen', 'vrai-faux', 'Le Brésil est la seule sélection à avoir participé à toutes les Coupes du monde.', VF, 0, 'Vingt-deux participations sur vingt-deux éditions.'),
+
+  // ---------------------------- DIFFICILE ----------------------------
+  q('difficile', 'qcm', 'Qui est le meilleur buteur de l’histoire de la Coupe du monde ?', ['Miroslav Klose', 'Ronaldo', 'Gerd Müller', 'Just Fontaine'], 0, 'Seize buts entre 2002 et 2014, devant les quinze de Ronaldo.'),
+  q('difficile', 'devine', 'Il a inscrit treize buts en une seule édition, record toujours debout.', ['Just Fontaine', 'Sándor Kocsis', 'Gerd Müller', 'Eusébio'], 0, 'Just Fontaine en 1958, en six matchs avec la France.'),
+  q('difficile', 'qcm', 'Qui a marqué le tout premier but de l’histoire de la Coupe du monde, en 1930 ?', ['Lucien Laurent', 'Guillermo Stábile', 'Bert Patenaude', 'Pedro Cea'], 0, 'Le Français Lucien Laurent, contre le Mexique.'),
+  q('difficile', 'qcm', 'Quel pays a remporté la Coupe du monde 1950 au terme du « Maracanazo » ?', ['Uruguay', 'Brésil', 'Suède', 'Espagne'], 0, 'L’Uruguay fait taire le Maracanã en battant le Brésil 2-1.'),
+  q('difficile', 'date', 'En quelle année la Coupe du monde s’est-elle jouée pour la première fois en Asie ?', ['2002', '1998', '2006', '1994'], 0, 'Corée du Sud et Japon coorganisent l’édition 2002.'),
+  q('difficile', 'qcm', 'Quel pays a remporté la Coupe du monde 1938 ?', ['Italie', 'Hongrie', 'Brésil', 'France'], 0, 'L’Italie conserve son titre en battant la Hongrie 4-2.'),
+  q('difficile', 'devine', 'Gardien et capitaine, il a soulevé le trophée en 1982 à trente-neuf ans passés.', ['Dino Zoff', 'Gordon Banks', 'Sepp Maier', 'Gilmar'], 0, 'Dino Zoff reste le plus vieux champion du monde.'),
+  q('difficile', 'qcm', 'Quelle sélection a atteint la demi-finale en 2002 pour sa première participation en tant que coorganisateur ?', ['Corée du Sud', 'Japon', 'Sénégal', 'Turquie'], 0, 'La Corée du Sud élimine l’Italie puis l’Espagne.'),
+  q('difficile', 'intrus', 'Lequel de ces joueurs n’a jamais été champion du monde ?', ['Johan Cruyff', 'Bobby Charlton', 'Paolo Rossi', 'Mario Kempes'], 0, 'Cruyff a perdu la finale 1974 contre la RFA.'),
+  q('difficile', 'qcm', 'Combien de Coupes du monde l’Uruguay a-t-il remportées ?', ['Deux', 'Une', 'Trois', 'Quatre'], 0, '1930 et 1950.'),
+  q('difficile', 'date', 'En quelle année la Coupe du monde est-elle passée de seize à vingt-quatre équipes ?', ['1982', '1974', '1990', '1978'], 0, 'Le format s’élargit en Espagne, avant les trente-deux de 1998.'),
+  q('difficile', 'qcm', 'Qui a inscrit le but du titre pour l’Espagne en finale 2010 ?', ['Andrés Iniesta', 'David Villa', 'Xavi', 'Fernando Torres'], 0, 'À la 116e minute contre les Pays-Bas.'),
+  q('difficile', 'vrai-faux', 'Aucune sélection n’a jamais remporté la Coupe du monde hors de son continent avant 2002.', VF, 1, 'Le Brésil l’avait déjà fait en 1958 en Suède, puis en 1994 aux États-Unis.'),
+  q('difficile', 'qcm', 'Quel joueur a disputé cinq Coupes du monde avec le Mexique en tant que gardien ?', ['Antonio Carbajal', 'Jorge Campos', 'Guillermo Ochoa', 'Oswaldo Sánchez'], 0, 'De 1950 à 1966, un record longtemps unique.'),
+  q('difficile', 'qcm', 'Comment la France, tenante du titre, a-t-elle terminé la Coupe du monde 2002 ?', ['Éliminée au premier tour sans marquer un seul but', 'Éliminée en huitièmes de finale', 'Éliminée en quarts de finale', 'Demi-finaliste'], 0, 'Un seul point en trois matchs, et zéro but inscrit.'),
+  q('difficile', 'devine', 'Il a marqué en finale de Coupe du monde à dix-sept ans, record de précocité.', ['Pelé', 'Kylian Mbappé', 'Michael Owen', 'Norman Whiteside'], 0, 'Pelé marque deux fois en finale 1958 contre la Suède.'),
+
+  q('facile', 'qcm', 'Quel pays a remporté la Coupe du monde 1994 ?', ['Brésil', 'Italie', 'Suède', 'Bulgarie'], 0, 'Aux tirs au but contre l’Italie, après un 0-0.'),
+  q('moyen', 'qcm', 'Dans quel pays s’est déroulée la Coupe du monde 1994 ?', ['États-Unis', 'Mexique', 'Canada', 'Brésil'], 0, 'Une édition record en affluence.'),
+  q('difficile', 'qcm', 'Quel joueur a été exclu de la Coupe du monde 1994 après un contrôle antidopage positif ?', ['Diego Maradona', 'Romário', 'Hristo Stoichkov', 'Roberto Baggio'], 0, 'Sa dernière apparition en Coupe du monde.'),
+];

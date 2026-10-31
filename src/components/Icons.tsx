@@ -108,3 +108,24 @@ export const IconProfil = ({ size }: { size?: number }) => (
     <path d="M4.8 20.4a7.2 7.2 0 0 1 14.4 0" />
   </Icon>
 );
+
+/** Coche de bonne réponse. */
+export const IconCheck = ({ size }: { size?: number }) => (
+  <Icon size={size}>
+    <path d="m5 12.5 4.5 4.5L19 7.5" />
+  </Icon>
+);
+
+/** Croix de mauvaise réponse. */
+export const IconCross = ({ size }: { size?: number }) => (
+  <Icon size={size}>
+    <path d="M6.5 6.5 17.5 17.5M17.5 6.5 6.5 17.5" />
+  </Icon>
+);
+
+/** Flèche de retour. */
+export const IconBack = ({ size }: { size?: number }) => (
+  <Icon size={size}>
+    <path d="M19 12H5M11 6l-6 6 6 6" />
+  </Icon>
+);

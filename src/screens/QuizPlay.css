@@ -1,0 +1,511 @@
+.lc-play {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--gap-xl) var(--page-pad) var(--gap-3xl);
+}
+
+/* ---------------------------- En-tête ---------------------------- */
+
+.lc-play__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-sm);
+}
+
+.lc-play__mode {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.lc-play__score {
+  position: relative;
+  margin-left: auto;
+  margin-right: var(--gap-md);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lc-play__score-n {
+  display: inline-block;
+}
+
+.lc-play__score-n.is-pulse {
+  animation: lc-score 500ms var(--ease);
+}
+
+@keyframes lc-score {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.25);
+    color: var(--accent);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Le « +3 » qui monte près du score */
+.lc-play__plus {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--accent);
+  font-size: 20px;
+  animation: lc-plus 750ms var(--ease) 150ms backwards;
+  pointer-events: none;
+}
+
+@keyframes lc-plus {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+}
+
+.lc-play__quit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    color var(--t-micro) var(--ease),
+    border-color var(--t-micro) var(--ease);
+}
+
+.lc-play__quit:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+/* ---------------------------- Chrono ---------------------------- */
+
+.lc-play__timer {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.lc-play__timer > i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left;
+  will-change: transform;
+}
+
+/* --------------------------- Question --------------------------- */
+
+.lc-play__body {
+  padding-top: var(--gap-lg);
+}
+
+.lc-play__body > * {
+  /* Rang de l'élément dans la cascade ; surchargé en ligne. */
+  --i: 0;
+  animation: lc-rise var(--t-screen) var(--ease) backwards;
+  animation-delay: calc(var(--i) * var(--stagger));
+}
+
+.lc-play__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 var(--gap-md);
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.lc-play__sep {
+  opacity: 0.5;
+}
+
+.lc-play__clock {
+  font-variant-numeric: tabular-nums;
+}
+
+.lc-play__clock.is-low {
+  color: var(--warning);
+}
+
+.lc-play__kind {
+  color: var(--accent);
+}
+
+.lc-play__question {
+  max-width: 24ch;
+  margin: 0 0 var(--gap-xl);
+  font-family: var(--font-display);
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+/* --------------------------- Réponses --------------------------- */
+
+.lc-play__answers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 540px));
+  gap: var(--gap-md);
+}
+
+.lc-play__answer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  min-height: 96px;
+  padding: 0 20px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  --i: 0;
+  animation: lc-rise var(--t-screen) var(--ease) backwards;
+  animation-delay: calc(var(--i) * var(--stagger));
+  transition:
+    transform var(--t-micro) var(--ease),
+    border-color var(--t-micro) var(--ease),
+    background-color var(--t-micro) var(--ease),
+    box-shadow var(--t-micro) var(--ease),
+    opacity 300ms var(--ease);
+}
+
+.lc-play__answer:hover:not(:disabled) {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  background: var(--surface-2);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.5);
+}
+
+.lc-play__answer:disabled {
+  cursor: default;
+}
+
+.lc-play__letter {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  transition:
+    background-color var(--t-micro) var(--ease),
+    border-color var(--t-micro) var(--ease),
+    color var(--t-micro) var(--ease);
+}
+
+.lc-play__text {
+  flex: 1;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.lc-play__mark {
+  flex: none;
+  width: 26px;
+  display: grid;
+  place-items: center;
+}
+
+.lc-play__mark svg {
+  animation: lc-mark 350ms var(--ease-back) backwards;
+}
+
+@keyframes lc-mark {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* --- Bonne réponse, animation 3 --- */
+.lc-play__answer.is-right {
+  background: rgba(43, 211, 107, 0.18);
+  border-color: var(--accent);
+  box-shadow: 0 0 40px rgba(43, 211, 107, 0.35);
+  animation: lc-right-pulse 350ms var(--ease);
+}
+
+.lc-play__answer.is-right .lc-play__letter {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.lc-play__answer.is-right .lc-play__mark {
+  color: var(--accent);
+}
+
+@keyframes lc-right-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+/* --- Mauvaise réponse, animation 4 --- */
+.lc-play__answer.is-wrong {
+  background: rgba(255, 90, 95, 0.16);
+  border-color: var(--danger);
+  animation: lc-shake 400ms var(--ease);
+}
+
+.lc-play__answer.is-wrong .lc-play__letter {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: var(--accent-ink);
+}
+
+.lc-play__answer.is-wrong .lc-play__mark {
+  color: var(--danger);
+}
+
+@keyframes lc-shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-14px);
+  }
+  40% {
+    transform: translateX(9px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* --- La bonne réponse s'allume 400 ms plus tard --- */
+.lc-play__answer.is-shown {
+  border-color: var(--accent);
+  animation: lc-show 300ms var(--ease) 400ms backwards;
+}
+
+.lc-play__answer.is-shown .lc-play__letter {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.lc-play__answer.is-shown .lc-play__mark {
+  color: var(--accent);
+}
+
+.lc-play__answer.is-shown .lc-play__mark svg {
+  animation-delay: 400ms;
+}
+
+@keyframes lc-show {
+  from {
+    box-shadow: 0 0 0 10px rgba(43, 211, 107, 0.45);
+  }
+  to {
+    box-shadow: 0 0 0 0 rgba(43, 211, 107, 0);
+  }
+}
+
+.lc-play__answer.is-dim {
+  opacity: 0.4;
+}
+
+/* ------------------- Flash de projecteur et alarme ------------------- */
+
+.lc-play__flash {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% -10%, rgba(255, 255, 255, 0.5), transparent 60%);
+  animation: lc-flash 600ms var(--ease) forwards;
+}
+
+@keyframes lc-flash {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.lc-play__alarm {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  box-shadow: inset 0 0 180px rgba(255, 90, 95, 0.55);
+  animation: lc-alarm 700ms var(--ease) forwards;
+}
+
+@keyframes lc-alarm {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* --------------------------- Correction --------------------------- */
+
+.lc-play__explain {
+  max-width: 72ch;
+  margin: var(--gap-md) 0 0;
+  font-size: 18px;
+  color: var(--text-muted);
+  animation: lc-rise 300ms var(--ease) 400ms backwards;
+}
+
+.lc-play__explain strong {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+/* ---------------------------- Mobile ---------------------------- */
+
+@media (max-width: 1180px) {
+  .lc-play {
+    padding-left: var(--gap-lg);
+    padding-right: var(--gap-lg);
+  }
+
+  .lc-play__question {
+    font-size: 31px;
+    max-width: none;
+  }
+
+  .lc-play__answers {
+    grid-template-columns: 1fr;
+  }
+
+  .lc-play__answer {
+    min-height: 72px;
+  }
+
+  .lc-play__text {
+    font-size: 18px;
+  }
+
+  .lc-play__letter {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+}
+
+/* L'en-tête d'un téléphone : tout doit tenir sur une seule ligne. */
+@media (max-width: 640px) {
+  .lc-play__mode,
+  .lc-play__meta {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+
+  .lc-play__mode {
+    max-width: 10ch;
+    line-height: 1.1;
+  }
+
+  .lc-play__score {
+    margin-right: var(--gap-xs);
+    font-size: 17px;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+  }
+
+  .lc-play__plus {
+    font-size: 15px;
+  }
+
+  .lc-play__quit {
+    padding: 0 12px;
+  }
+
+  .lc-play__quit span {
+    display: none;
+  }
+
+  .lc-play__meta {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .lc-play__question {
+    font-size: 27px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lc-play__answer.is-right,
+  .lc-play__answer.is-wrong,
+  .lc-play__score-n.is-pulse {
+    animation: none;
+  }
+}
