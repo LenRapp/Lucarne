@@ -1,0 +1,102 @@
+.lc-mode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 360px;
+  height: 170px;
+  padding: var(--gap-lg);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform var(--t-micro) var(--ease),
+    border-color var(--t-micro) var(--ease),
+    background-color var(--t-micro) var(--ease),
+    box-shadow var(--t-micro) var(--ease);
+}
+
+.lc-mode__icon {
+  display: block;
+  color: var(--accent);
+  transition: filter var(--t-micro) var(--ease);
+}
+
+.lc-mode__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lc-mode__name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.lc-mode__desc {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--text-muted);
+}
+
+/* — Survol : la carte monte de 6 px et s'allume — */
+.lc-mode:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  background: var(--surface-2);
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(43, 211, 107, 0.25);
+}
+
+.lc-mode:hover .lc-mode__icon {
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
+.lc-mode:active {
+  transform: translateY(-6px) scale(0.985);
+  transition-duration: 60ms;
+}
+
+/* — La carte Mon Ballon d'Or, dorée dès l'accueil — */
+.lc-mode--gold {
+  border-color: #8c6a1c;
+  background: #17140f;
+}
+
+.lc-mode--gold .lc-mode__icon {
+  color: #d4af37;
+}
+
+.lc-mode--gold .lc-mode__name {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: #f3d98b;
+  font-variant-numeric: lining-nums;
+}
+
+.lc-mode--gold .lc-mode__desc {
+  color: #bfa76a;
+}
+
+.lc-mode--gold:hover {
+  border-color: #d4af37;
+  background: #241e14;
+  box-shadow:
+    0 14px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(212, 175, 55, 0.25);
+}
+
+.lc-mode--gold:hover .lc-mode__icon {
+  filter: drop-shadow(0 0 8px #d4af37);
+}

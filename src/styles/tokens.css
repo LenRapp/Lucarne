@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Lucarne — variables de la charte validée le 31/10/2026
+   Les deux thèmes partagent les mêmes rôles : basculer de thème ne change
+   que les valeurs, jamais les noms.
+   ========================================================================== */
+
+:root,
+[data-theme='stade'] {
+  /* — Couleurs — */
+  --bg: #070b14; /* Nuit */
+  --surface: #0e1626; /* Tribune */
+  --surface-2: #16223a; /* Gradin */
+  --line: #1e2b45; /* Ligne */
+  --line-strong: #2b3b5c;
+  --text: #f2f6ff; /* Projecteur */
+  --text-muted: #9aa8c2;
+  --accent: #2bd36b; /* Pelouse */
+  --accent-press: #22b65b;
+  --accent-ink: #04130a;
+  --accent-soft: rgba(43, 211, 107, 0.14);
+  --grass-dark: #138a45;
+  --grass-darker: #117a3d;
+  --warning: #ffc53d; /* Carton jaune */
+  --danger: #ff5a5f; /* Carton rouge */
+  --danger-stripe: #c2343a;
+
+  --app-bg: radial-gradient(ellipse at 50% -20%, #14203a 0%, #070b14 60%);
+  --halo: rgba(242, 246, 255, 0.17);
+
+  /* — Typographies — */
+  --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+  --font-body: 'Barlow', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+
+  /* — Rayons — */
+  --r-badge: 6px;
+  --r-sm: 12px;
+  --r-md: 14px;
+  --r-card: 18px;
+  --r-panel: 24px;
+  --r-pill: 999px;
+
+  /* — Mouvement (niveau « équilibré ») — */
+  --t-micro: 120ms;
+  --t-screen: 280ms;
+  --t-strong: 700ms;
+  --stagger: 40ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* — Grille de 8 px — */
+  --gap-xs: 10px;
+  --gap-sm: 14px;
+  --gap-md: 20px;
+  --gap-lg: 24px;
+  --gap-xl: 32px;
+  --gap-2xl: 48px;
+  --gap-3xl: 72px;
+  --gap-4xl: 88px;
+
+  --page-max: 1440px;
+  --page-pad: 88px;
+}
+
+[data-theme='ballon-dor'] {
+  --bg: #0a0907; /* Velours */
+  --surface: #17140f; /* Écrin */
+  --surface-2: #241e14; /* Bronze nuit */
+  --line: #3a2f17;
+  --line-strong: #3a2f17;
+  --text: #f5eedc; /* Ivoire */
+  --text-muted: #bfa76a;
+  --accent: #d4af37; /* Or */
+  --accent-light: #f3d98b; /* Or clair */
+  --accent-deep: #8c6a1c; /* Or profond */
+  --accent-ink: #1a1406;
+  --accent-soft: rgba(212, 175, 55, 0.14);
+
+  --app-bg: radial-gradient(ellipse at 50% -10%, #3a2f17 0%, #0a0907 58%);
+  --halo: rgba(243, 217, 139, 0.14);
+  --metal: linear-gradient(135deg, #fff1c2, #d4af37 50%, #7a5a14);
+}

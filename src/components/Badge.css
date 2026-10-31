@@ -1,0 +1,22 @@
+.lc-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: var(--r-badge);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.lc-badge--points {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.lc-badge--rank {
+  border: 1px solid var(--accent-deep, var(--line-strong));
+  color: var(--accent-light, var(--accent));
+}

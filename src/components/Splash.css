@@ -1,0 +1,36 @@
+.lc-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  background-image: var(--app-bg);
+  transition: opacity 400ms var(--ease);
+  cursor: pointer;
+}
+
+.lc-splash.is-leaving {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Dans la séquence, le symbole est au-dessus du logotype, pas à côté. */
+.lc-splash .lc-logo {
+  flex-direction: column;
+  gap: var(--gap-lg);
+  text-align: center;
+}
+
+.lc-splash .lc-logo__text {
+  align-items: center;
+}
+
+.lc-splash .lc-logo__word {
+  font-size: 72px;
+  letter-spacing: 0.05em;
+}
+
+.lc-splash .lc-logo__sign {
+  font-size: 15px;
+}

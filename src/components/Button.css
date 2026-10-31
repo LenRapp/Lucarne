@@ -1,0 +1,142 @@
+.lc-btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  min-height: 60px;
+  min-width: 44px;
+  padding: 0 28px;
+  border: none;
+  border-radius: var(--r-md);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform var(--t-micro) var(--ease),
+    box-shadow var(--t-micro) var(--ease),
+    background-color var(--t-micro) var(--ease),
+    border-color var(--t-micro) var(--ease);
+}
+
+/* — Principal — */
+.lc-btn--primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 0 0 24px rgba(43, 211, 107, 0.35);
+}
+
+.lc-btn--primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 36px rgba(43, 211, 107, 0.6);
+}
+
+.lc-btn--primary:active {
+  transform: scale(0.97);
+  background: var(--accent-press);
+  transition-duration: 60ms;
+}
+
+/* — Secondaire — */
+.lc-btn--secondary {
+  background: transparent;
+  border: 1.5px solid var(--line-strong);
+  color: var(--text);
+}
+
+.lc-btn--secondary:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.lc-btn--secondary:active {
+  transform: scale(0.97);
+  transition-duration: 60ms;
+}
+
+/* — « ← Quitter », propre au thème Ballon d'Or — */
+.lc-btn--quit {
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.lc-btn--quit:hover {
+  color: var(--accent-light, var(--accent));
+  border-color: var(--accent-deep, var(--line-strong));
+}
+
+/* — L'anneau blanc qui part du point de clic — */
+.lc-btn__ring {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+  animation: lc-ring 300ms var(--ease) forwards;
+}
+
+@keyframes lc-ring {
+  from {
+    opacity: 0.9;
+    transform: scale(0.4);
+  }
+  to {
+    opacity: 0;
+    transform: scale(14);
+  }
+}
+
+/* ==========================================================================
+   Thème Ballon d'Or : pilules dorées en Cormorant
+   ========================================================================== */
+
+[data-theme='ballon-dor'] .lc-btn--primary,
+[data-theme='ballon-dor'] .lc-btn--secondary {
+  border-radius: var(--r-pill);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  font-variant-numeric: lining-nums;
+}
+
+[data-theme='ballon-dor'] .lc-btn--primary {
+  background: linear-gradient(135deg, #f3d98b, #d4af37);
+  color: var(--accent-ink);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.3);
+}
+
+[data-theme='ballon-dor'] .lc-btn--primary:hover {
+  box-shadow: 0 8px 36px rgba(212, 175, 55, 0.55);
+}
+
+[data-theme='ballon-dor'] .lc-btn--primary:active {
+  background: linear-gradient(135deg, #e6c86f, #b8912f);
+}
+
+[data-theme='ballon-dor'] .lc-btn--secondary {
+  border-color: var(--accent-deep);
+  color: var(--accent-light);
+}
+
+[data-theme='ballon-dor'] .lc-btn--secondary:hover {
+  border-color: var(--accent);
+}
+
+[data-theme='ballon-dor'] .lc-btn--quit {
+  font-family: var(--font-display);
+}

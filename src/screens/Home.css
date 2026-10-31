@@ -1,0 +1,111 @@
+.lc-home {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--gap-2xl) var(--page-pad) var(--gap-3xl);
+}
+
+/* — Barre du haut : logo à gauche, outils à droite — */
+.lc-home__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-lg);
+}
+
+.lc-home__tools {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.lc-home__timer {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  height: 42px;
+  padding: 0 18px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--r-pill);
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.lc-home__timer-value {
+  color: var(--warning);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.lc-home__profile {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    transform var(--t-micro) var(--ease),
+    border-color var(--t-micro) var(--ease),
+    color var(--t-micro) var(--ease);
+}
+
+.lc-home__profile:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* — Le titre de l'écran — */
+.lc-home__title {
+  margin: var(--gap-3xl) 0 var(--gap-xl);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 68px;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+/* — La grille des six modes, 3 × 2 — */
+.lc-home__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: var(--gap-md);
+  justify-content: start;
+}
+
+/* — Mobile : une colonne, titres réduits d'environ 40 % — */
+@media (max-width: 1180px) {
+  .lc-home {
+    padding-left: var(--gap-lg);
+    padding-right: var(--gap-lg);
+  }
+
+  .lc-home__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lc-mode {
+    width: 100%;
+  }
+
+  .lc-home__title {
+    margin-top: var(--gap-2xl);
+    font-size: 42px;
+  }
+
+  .lc-home__bar {
+    flex-wrap: wrap;
+  }
+}

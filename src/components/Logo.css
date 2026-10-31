@@ -1,0 +1,144 @@
+.lc-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.lc-logo__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.lc-logo__word {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 0.9;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.lc-logo__sign {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.lc-mark {
+  display: block;
+  flex: none;
+}
+
+/* ==========================================================================
+   Séquence de lancement (animation 00), environ 2,1 s
+   ========================================================================== */
+
+/* 300 → 1100 ms : le poteau et la barre se dessinent */
+.lc-mark.is-animated .lc-mark__frame {
+  stroke-dasharray: 180;
+  animation: lc-draw 800ms var(--ease) 300ms backwards;
+}
+
+@keyframes lc-draw {
+  from {
+    stroke-dashoffset: 180;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 900 → 1400 ms : les pointillés du filet apparaissent */
+.lc-mark.is-animated .lc-mark__net--near {
+  animation: lc-net-near 500ms var(--ease) 900ms backwards;
+}
+
+.lc-mark.is-animated .lc-mark__net--far {
+  animation: lc-net-far 500ms var(--ease) 1000ms backwards;
+}
+
+@keyframes lc-net-near {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+@keyframes lc-net-far {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.45;
+  }
+}
+
+/* 1000 → 1550 ms : le ballon arrive en diagonale du bas à droite, en tournant */
+.lc-mark.is-animated .lc-mark__ball {
+  transform-origin: 50px 50px;
+  animation: lc-shoot 550ms var(--ease-back) 1000ms backwards;
+}
+
+@keyframes lc-shoot {
+  from {
+    opacity: 0;
+    transform: translate(60px, 60px) rotate(-360deg) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 1400 → 1900 ms : le logotype monte de 30 px — 1600 → 2100 ms : la signature */
+.lc-logo.is-animated .lc-logo__word {
+  animation: lc-rise-30 500ms var(--ease) 1400ms backwards;
+}
+
+.lc-logo.is-animated .lc-logo__sign {
+  animation: lc-rise-20 500ms var(--ease) 1600ms backwards;
+}
+
+@keyframes lc-rise-30 {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes lc-rise-20 {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lc-mark.is-animated .lc-mark__frame {
+    stroke-dasharray: none;
+    animation: none;
+  }
+
+  .lc-mark.is-animated .lc-mark__ball,
+  .lc-mark.is-animated .lc-mark__net--near,
+  .lc-mark.is-animated .lc-mark__net--far,
+  .lc-logo.is-animated .lc-logo__word,
+  .lc-logo.is-animated .lc-logo__sign {
+    animation: none;
+  }
+}
