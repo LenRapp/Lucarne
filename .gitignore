@@ -28,3 +28,6 @@ dist-ssr
 
 # Clés Supabase (locales, jamais versionnées)
 .env
+
+# Configuration locale de l'outil Claude Code
+.claude/
