@@ -16,9 +16,12 @@ import '@fontsource/cormorant-garamond/700.css';
 import './styles/tokens.css';
 import './styles/base.css';
 import App from './App';
+import { AuthProvider } from './lib/auth';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </StrictMode>,
 );

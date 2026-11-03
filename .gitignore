@@ -25,3 +25,6 @@ dist-ssr
 
 # Brainstorming visuel (temporaire)
 .superpowers/
+
+# Clés Supabase (locales, jamais versionnées)
+.env

@@ -3,10 +3,17 @@ import { ModeCard } from '../components/ModeCard';
 import { IconProfil } from '../components/Icons';
 import { MODES } from '../data/modes';
 import { useTimeUntilMidnight } from '../hooks/useTimeUntilMidnight';
+import { useAuth } from '../lib/auth-context';
 import './Home.css';
 
-export function Home({ onSelectMode }: { onSelectMode?: (id: string) => void }) {
+type Props = {
+  onSelectMode?: (id: string) => void;
+  onProfile?: () => void;
+};
+
+export function Home({ onSelectMode, onProfile }: Props) {
   const countdown = useTimeUntilMidnight();
+  const { profile } = useAuth();
 
   return (
     <div className="lc-home lc-enter">
@@ -22,7 +29,14 @@ export function Home({ onSelectMode }: { onSelectMode?: (id: string) => void }) 
             <span className="lc-home__timer-value">{countdown}</span>
           </span>
 
-          <button type="button" className="lc-home__profile" aria-label="Mon profil">
+          {profile && <span className="lc-home__pseudo">{profile.pseudo}</span>}
+
+          <button
+            type="button"
+            className="lc-home__profile"
+            aria-label={profile ? 'Mon profil' : 'Se connecter'}
+            onClick={onProfile}
+          >
             <IconProfil size={22} />
           </button>
         </div>
