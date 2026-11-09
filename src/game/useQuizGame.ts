@@ -1,13 +1,10 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { QUESTIONS } from '../data/questions';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import type { Question } from '../data/questions/types';
 import {
-  QUESTIONS_PER_GAME,
   SECONDS_PER_QUESTION,
   POINTS_PER_CORRECT,
   type Answered,
-  type QuizSetup,
   isCorrect,
-  pickQuestions,
 } from './quiz';
 
 /** `playing` : le chrono tourne. `revealed` : la réponse est affichée. */
@@ -16,12 +13,12 @@ export type GameStatus = 'playing' | 'revealed' | 'finished';
 /** Temps d'affichage de la correction avant de passer à la question suivante. */
 const REVEAL_MS = 1800;
 
-export function useQuizGame(setup: QuizSetup) {
-  const questions = useMemo(
-    () => pickQuestions(QUESTIONS, setup, QUESTIONS_PER_GAME),
-    [setup],
-  );
-
+/**
+ * Déroule une partie sur une liste de questions déjà tirée. Le tirage est
+ * décidé ailleurs : au hasard pour le quiz, à partir de la date pour le défi
+ * du jour. Le moteur, lui, est le même.
+ */
+export function useQuizGame(questions: readonly Question[]) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Answered[]>([]);
   const [chosen, setChosen] = useState<number | null>(null);

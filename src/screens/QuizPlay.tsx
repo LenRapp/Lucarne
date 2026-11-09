@@ -1,20 +1,23 @@
 import { useEffect, useState } from 'react';
 import { IconBack, IconCheck, IconCross } from '../components/Icons';
-import { QUESTION_TYPES, THEME_LABELS } from '../data/questions/types';
-import { SECONDS_PER_QUESTION, type Answered, type QuizSetup } from '../game/quiz';
+import { QUESTION_TYPES, type Question } from '../data/questions/types';
+import { SECONDS_PER_QUESTION, type Answered } from '../game/quiz';
 import { useQuizGame } from '../game/useQuizGame';
 import './QuizPlay.css';
 
 const LETTERS = ['A', 'B', 'C', 'D'];
 
 type Props = {
-  setup: QuizSetup;
+  /** Les questions déjà tirées : au hasard pour un quiz, par date pour le défi. */
+  questions: Question[];
+  /** Ce qui s'affiche en haut à gauche, par exemple « Quiz · Légendes ». */
+  label: string;
   onFinish: (answers: Answered[]) => void;
   onQuit: () => void;
 };
 
-export function QuizPlay({ setup, onFinish, onQuit }: Props) {
-  const game = useQuizGame(setup);
+export function QuizPlay({ questions, label, onFinish, onQuit }: Props) {
+  const game = useQuizGame(questions);
   const { question, status, chosen, index, total, score, remainingMs, secondsLeft } = game;
 
   const revealed = status === 'revealed';
@@ -35,7 +38,6 @@ export function QuizPlay({ setup, onFinish, onQuit }: Props) {
 
   if (status === 'finished') return null;
 
-  const themeLabel = setup.theme === 'general' ? 'Général' : THEME_LABELS[setup.theme];
   const progress = (remainingMs / (SECONDS_PER_QUESTION * 1000)) * 100;
 
   return (
@@ -44,7 +46,7 @@ export function QuizPlay({ setup, onFinish, onQuit }: Props) {
       {wasWrong && <div className="lc-play__alarm" aria-hidden="true" />}
 
       <header className="lc-play__top">
-        <span className="lc-play__mode">Quiz · {themeLabel}</span>
+        <span className="lc-play__mode">{label}</span>
 
         <span className="lc-play__score">
           <span className={`lc-play__score-n${shownScore !== score ? '' : ' is-pulse'}`}>

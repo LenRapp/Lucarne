@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { Splash } from './components/Splash';
 import { Auth } from './screens/Auth';
+import { DailyChallenge } from './screens/DailyChallenge';
 import { Home } from './screens/Home';
 import { Profile } from './screens/Profile';
 import { QuizPlay } from './screens/QuizPlay';
@@ -8,30 +9,44 @@ import { QuizResult } from './screens/QuizResult';
 import { QuizSetup } from './screens/QuizSetup';
 import { useAuth } from './lib/auth-context';
 import { saveQuizGame } from './lib/games';
-import { correctCount, totalScore, type Answered, type QuizSetup as Setup } from './game/quiz';
+import { QUESTIONS } from './data/questions';
+import { THEME_LABELS, type Question } from './data/questions/types';
+import {
+  correctCount,
+  pickQuestions,
+  totalScore,
+  type Answered,
+  type QuizSetup as Setup,
+} from './game/quiz';
 
 /** Les écrans déjà construits. Les autres modes arriveront aux étapes suivantes. */
 type Screen =
   | { name: 'home' }
   | { name: 'auth' }
   | { name: 'profile' }
+  | { name: 'daily' }
   | { name: 'quiz-setup' }
-  | { name: 'quiz-play'; setup: Setup }
+  | { name: 'quiz-play'; setup: Setup; questions: Question[] }
   | { name: 'quiz-result'; setup: Setup; answers: Answered[] };
+
+function quizLabel(setup: Setup): string {
+  return setup.theme === 'general' ? 'Quiz · Général' : `Quiz · ${THEME_LABELS[setup.theme]}`;
+}
 
 export default function App() {
   const { session } = useAuth();
   const [showSplash, setShowSplash] = useState(Splash.shouldPlay);
   const [screen, setScreen] = useState<Screen>({ name: 'home' });
-  /** Change à chaque partie, pour qu'une revanche retire de nouvelles questions. */
+  /** Change à chaque partie, pour remonter proprement l'écran de jeu. */
   const [run, setRun] = useState(0);
 
   const closeSplash = useCallback(() => setShowSplash(false), []);
   const goHome = useCallback(() => setScreen({ name: 'home' }), []);
 
   const selectMode = useCallback((id: string) => {
-    // Seul le quiz est jouable pour l'instant.
+    // Les modes non encore construits ne font rien pour l'instant.
     if (id === 'quiz') setScreen({ name: 'quiz-setup' });
+    else if (id === 'defi') setScreen({ name: 'daily' });
   }, []);
 
   /** Le bouton profil mène au profil si l'on est connecté, à l'identification sinon. */
@@ -39,6 +54,12 @@ export default function App() {
     if (session) setScreen({ name: 'profile' });
     else setScreen({ name: 'auth' });
   }, [session]);
+
+  /** Lance une partie de quiz : le tirage se fait ici, le moteur ne fait que dérouler. */
+  const startQuiz = useCallback((setup: Setup) => {
+    setRun((n) => n + 1);
+    setScreen({ name: 'quiz-play', setup, questions: pickQuestions(QUESTIONS, setup) });
+  }, []);
 
   /**
    * Fin de partie : on affiche le résultat tout de suite, et la sauvegarde se
@@ -82,21 +103,18 @@ export default function App() {
 
       {screen.name === 'profile' && <Profile onBack={goHome} />}
 
-      {screen.name === 'quiz-setup' && (
-        <QuizSetup
-          onBack={goHome}
-          onStart={(setup) => {
-            setRun((n) => n + 1);
-            setScreen({ name: 'quiz-play', setup });
-          }}
-        />
+      {screen.name === 'daily' && (
+        <DailyChallenge onBack={goHome} onSignIn={() => setScreen({ name: 'auth' })} />
       )}
+
+      {screen.name === 'quiz-setup' && <QuizSetup onBack={goHome} onStart={startQuiz} />}
 
       {screen.name === 'quiz-play' && (
         <QuizPlay
-          // Remonter le composant repart à zéro et retire de nouvelles questions.
+          // Remonter le composant repart à zéro sur le nouveau tirage.
           key={run}
-          setup={screen.setup}
+          questions={screen.questions}
+          label={quizLabel(screen.setup)}
           onQuit={goHome}
           onFinish={(answers) => finishQuiz(screen.setup, answers)}
         />
@@ -106,10 +124,7 @@ export default function App() {
         <QuizResult
           answers={screen.answers}
           onHome={goHome}
-          onReplay={() => {
-            setRun((n) => n + 1);
-            setScreen({ name: 'quiz-play', setup: screen.setup });
-          }}
+          onReplay={() => startQuiz(screen.setup)}
         />
       )}
     </>

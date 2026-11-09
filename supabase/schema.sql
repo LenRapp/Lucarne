@@ -96,3 +96,31 @@ create policy "Chacun enregistre ses parties"
 
 create index if not exists quiz_games_user_played_idx
   on public.quiz_games (user_id, played_at desc);
+
+-- ---------------------------- Défi du jour ----------------------------
+-- Retrouver le nom d'un joueur en six essais. Une seule ligne par joueur et
+-- par jour : la clé primaire suffit à garantir l'unique tentative
+-- quotidienne, sans que l'application ait à y veiller.
+
+create table if not exists public.daily_results (
+  user_id uuid not null references public.profiles on delete cascade,
+  day date not null,
+  -- Le nom a-t-il été trouvé, et en combien d'essais (six si échec).
+  found boolean not null,
+  attempts int not null check (attempts between 1 and 6),
+  score int not null check (score >= 0),
+  played_at timestamptz not null default now(),
+  primary key (user_id, day)
+);
+
+alter table public.daily_results enable row level security;
+
+drop policy if exists "Chacun lit ses défis" on public.daily_results;
+create policy "Chacun lit ses défis"
+  on public.daily_results for select
+  using (auth.uid() = user_id);
+
+drop policy if exists "Chacun enregistre son défi" on public.daily_results;
+create policy "Chacun enregistre son défi"
+  on public.daily_results for insert
+  with check (auth.uid() = user_id);

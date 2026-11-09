@@ -1,0 +1,461 @@
+.lc-daily {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: var(--gap-2xl) var(--page-pad) var(--gap-3xl);
+}
+
+.lc-daily__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-lg);
+}
+
+.lc-daily__back {
+  min-height: 44px;
+  padding: 0 18px;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+}
+
+/* ------------------------------ En-tête ------------------------------ */
+
+.lc-daily__head {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  margin: var(--gap-xl) 0 var(--gap-lg);
+}
+
+.lc-daily__glyph {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 84px;
+  height: 84px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  color: var(--accent);
+}
+
+.lc-daily__kicker {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.lc-daily__title {
+  margin: 4px 0 2px;
+  font-family: var(--font-display);
+  font-size: 52px;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.lc-daily__rule {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ------------------------------- Série ------------------------------- */
+
+.lc-daily__streaks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--gap-xs);
+  margin-bottom: var(--gap-lg);
+}
+
+.lc-daily__streak {
+  padding: 14px 20px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-card);
+  background: var(--surface);
+}
+
+.lc-daily__streak b {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.lc-daily__streak small {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.lc-daily__clock {
+  color: var(--warning) !important;
+  letter-spacing: 0.04em;
+}
+
+/* ------------------------------ Panneaux ------------------------------ */
+
+.lc-daily__panel {
+  max-width: 640px;
+  padding: var(--gap-lg);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-panel);
+  background: var(--surface);
+}
+
+.lc-daily__panel p {
+  margin: 0 0 var(--gap-md);
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.lc-daily__name {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.lc-daily__done {
+  font-family: var(--font-display);
+  font-size: 32px !important;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent) !important;
+  margin-bottom: var(--gap-xs) !important;
+}
+
+.lc-daily__loading {
+  margin: 0;
+  font-size: 19px;
+  color: var(--text-muted);
+}
+
+.lc-daily__error {
+  max-width: 640px;
+  margin: 0 0 var(--gap-md);
+  padding: 14px 18px;
+  border-radius: var(--r-sm);
+  background: rgba(255, 90, 95, 0.14);
+  color: var(--danger);
+}
+
+/* =========================== Le plateau =========================== */
+
+.lc-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-lg);
+}
+
+.lc-board__grid {
+  display: grid;
+  gap: 8px;
+}
+
+.lc-board__row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.lc-board__row.is-shaking {
+  animation: lc-row-shake 400ms var(--ease);
+}
+
+@keyframes lc-row-shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-12px);
+  }
+  40% {
+    transform: translateX(8px);
+  }
+  60% {
+    transform: translateX(-4px);
+  }
+  80% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.lc-cell {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition:
+    border-color var(--t-micro) var(--ease),
+    transform var(--t-micro) var(--ease);
+}
+
+/* La lettre qu'on vient de taper : la case se réveille. */
+.lc-cell.is-typed {
+  border-color: var(--line-strong);
+  animation: lc-pop var(--t-micro) var(--ease);
+}
+
+@keyframes lc-pop {
+  0% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Les lettres se retournent une à une, de gauche à droite. */
+.lc-cell.is-right,
+.lc-cell.is-elsewhere,
+.lc-cell.is-none {
+  animation: lc-flip 420ms var(--ease) backwards;
+  animation-delay: calc(var(--c, 0) * 90ms);
+}
+
+@keyframes lc-flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.lc-cell.is-right {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 0 0 24px rgba(43, 211, 107, 0.35);
+}
+
+.lc-cell.is-elsewhere {
+  background: var(--warning);
+  border-color: var(--warning);
+  color: #2a1d00;
+}
+
+/* Une lettre absente reste une case ordinaire : rien ne s'éteint. */
+.lc-cell.is-none {
+  border-color: var(--line-strong);
+}
+
+/* --------------------------- Fin de partie --------------------------- */
+
+.lc-board__end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-sm);
+  text-align: center;
+  max-width: 560px;
+}
+
+.lc-board__verdict {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lc-board__verdict.is-won {
+  color: var(--accent);
+  text-shadow: 0 0 30px rgba(43, 211, 107, 0.4);
+  animation: lc-won 600ms var(--ease-back);
+}
+
+@keyframes lc-won {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lc-board__verdict.is-lost {
+  color: var(--danger);
+}
+
+.lc-board__invite {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.lc-board__invite button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--accent);
+  font-size: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.lc-board__who {
+  margin: 0 0 var(--gap-xs);
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* ----------------------------- Clavier ----------------------------- */
+
+.lc-keys {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.lc-keys__row {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.lc-key {
+  flex: 1;
+  min-width: 0;
+  height: 56px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform var(--t-micro) var(--ease),
+    border-color var(--t-micro) var(--ease),
+    background-color var(--t-micro) var(--ease);
+}
+
+.lc-key:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: var(--surface-2);
+}
+
+.lc-key:active {
+  transform: scale(0.95);
+  transition-duration: 60ms;
+}
+
+.lc-key--wide {
+  flex: 2;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+}
+
+/* ----------------------------- Mobile ----------------------------- */
+
+@media (max-width: 1180px) {
+  .lc-daily {
+    padding-left: var(--gap-lg);
+    padding-right: var(--gap-lg);
+  }
+
+  .lc-daily__title {
+    font-size: 32px;
+  }
+
+  .lc-daily__glyph {
+    width: 60px;
+    height: 60px;
+  }
+
+  .lc-daily__panel p {
+    font-size: 16px;
+  }
+
+  .lc-cell {
+    width: 46px;
+    height: 46px;
+    font-size: 24px;
+  }
+
+  .lc-key {
+    height: 48px;
+    font-size: 17px;
+  }
+
+  .lc-board__verdict {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .lc-cell {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+
+  .lc-board__row,
+  .lc-board__grid {
+    gap: 5px;
+  }
+
+  .lc-key {
+    height: 44px;
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lc-cell.is-right,
+  .lc-cell.is-elsewhere,
+  .lc-cell.is-none,
+  .lc-cell.is-typed,
+  .lc-board__row.is-shaking,
+  .lc-board__verdict.is-won {
+    animation: none;
+  }
+}
